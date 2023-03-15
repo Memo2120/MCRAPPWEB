@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root {
+	/* --primary-color: #c7a17a; */
+	--background-color: #f9f5f0;
+	--dark-color: #151515;
+	}
+
+	  .footer {
+	  background-color:#bdb87d;
+	  /* height: 420px; */
+
+	  }
+
+	  .container-footer {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		padding: 1rem;
+		margin-bottom: -24px;
+	  }
+
+	  .menu-footer {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr) 20rem;
+		gap: 1.9rem;
+		justify-items: center;
+	  }
+
+	  .title-footer {
+		font-weight: 600;
+		font-size: 1rem;
+		text-transform: uppercase;
+	  }
+
+	  .contact-info,
+	  .information,
+	  .my-account,
+	  .newsletter {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	  }
+
+	  .contact-info ul,
+	  .information ul,
+	  .my-account ul {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	  }
+
+	  .contact-info ul li,
+	  .information ul li,
+	  .my-account ul li {
+		list-style: none;
+		color: #fff;
+		font-size: 1rem;
+		font-weight: 300;
+		margin-left: -33px;
+	  }
+
+	  .information ul li a,
+	  .my-account ul li a {
+		text-decoration: none;
+		color: #fff;
+		font-weight: 300;
+	  }
+
+	  .information ul li a:hover,
+	  .my-account ul li a:hover {
+		color: var(--dark-color);
+	  }
+
+	  .social-icons {
+		display: flex;
+		gap: .5rem;
+	  }
+
+	  .social-icons span {
+		border-radius: 50%;
+		width: 1.5rem;
+		height: 1.5rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	  }
+
+	  .social-icons span i {
+		color: #fff;
+		font-size: 1rem;
+	  }
+
+	  .facebook {
+		background-color: #3b5998;
+	  }
+
+	  .twitter {
+		background-color: #00acee;
+	  }
+
+	  .youtube {
+		background-color: #c4302b;
+	  }
+
+	  .pinterest {
+		background-color: #c8232c;
+	  }
+
+	  .instagram {
+		background: linear-gradient(
+		  #405de6,
+		  #833ab4,
+		  #c13584,
+		  #e1306c,
+		  #fd1d1d,
+		  #f56040,
+		  #fcaf45
+		);
+	  }
+
+	  .content p {
+		font-size: 1rem;
+		color: #fff;
+		font-weight: 300;
+	  }
+
+	  .content input {
+		outline: none;
+		background: none;
+		border: none;
+		border-bottom: 2px solid #d2b495;
+		cursor: pointer;
+		padding: 0.5rem 1rem;
+		color: var(--dark-color);
+		display: block;
+		margin-bottom: 1.5rem;
+		margin-top: 1.5rem;
+		width: 100%;
+		font-family: inherit;
+	  }
+
+	  .content input::-webkit-input-placeholder {
+		color: #eee;
+	  }
+
+	  .content button {
+		border: none;
+		background-color: #000;
+		color: #fff;
+		text-transform: uppercase;
+		padding: .5rem 2rem;
+		border-radius: 2rem;
+		font-size: 1rem;
+		font-family: inherit;
+		cursor: pointer;
+		font-weight: 500;
+	  }
+
+	  .content button:hover {
+		background-color: var(--background-color);
+		color: var(--primary-color);
+	  }
+
+	  .copyright {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 1.5rem;
+
+		border-top: 1px solid #d2b495;
+	  }
+
+	  .img{
+		width: 234px;
+		height: 25px; 
+	  }
+	  .img2{
+		width: 1300px;
+		height: 500px; 
+		margin-left: -330px;
+	  }
+
+	  .copyright p {
+		font-weight: 600;
+		font-size: 1rem;
+	  }
+
+	  .img_pro{
+		height: 100px;
+		width: 200px;
+	  }
+
+	  .card1{
+		text-align: center;
+	  }
+	  .col1{
+		box-shadow: 10px 10px 5px rgb(105, 170, 243);
+		height: 150px;
+		width: 250px;
+		margin-top: 30px;
+	  }
+	  .col5{
+		box-shadow: 10px 10px 5px rgb(105, 170, 243);
+		height: 150px;
+		width: 250px;
+	  }
+	  .col2{
+		box-shadow: 10px 10px 5px rgb(105, 170, 243);
+		height: 150px;
+		width: 250px;
+		margin-left: 250px;
+	  }
+	  .col3{
+		box-shadow: 10px 10px 5px rgb(105, 170, 243);
+		height: 150px;
+		width: 250px;
+	  }
+
+	  .card-text{
+		font-size: .8rem;
+	  }
+	  .container1{
+		margin-left: 470px;
+	  }
+	  
+	  .imgcarrousel{
+		display: block;
+		border-radius: 10px;
+		width: 100%;
+		height: 600px;
+	  }
+
+	  #carrousel{
+		margin-top: -25px;
+		margin-left: -311px;
+		width: 1920px;
+	  }
+
+	  .div1{
+		background-color: black;
+		margin-top: 5px;
+		border-radius: 10px;
+		margin-left: 5px;
+	  }
+
+	  .div2{
+		background-color: black;
+		border-radius: 10px;
+		margin-left: 5px;
+	  }
+
+	  .div3{
+		background-color: black;
+		border-radius: 10px;
+		margin-left: 5px;
+	  }
+
+	  #seccion1{
+		background-color: black;
+		margin-left: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		}
+
+	  /* #sec{
+		background-color: black;
+		border-radius: 10px;
+		margin-left: 5px;
+	  } */
+
+	  .servicio{
+		display: inline-block;
+		background-color: white;
+		border-radius: 10px;
+		margin-left: 30px;
+		width: 200px;
+		height: 200px;
+	  }
