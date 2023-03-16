@@ -7,12 +7,13 @@
     <title>Document</title>
     @yield('css')
     @yield('scriptsArriba')
-    <script src="https://cdn.tailwindcss.com"></script>
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
+    <link rel="stylesheet" href="{{asset('css/crud.css')}}">
 </head>
 <body>
     
     @include('privado/navbar')
-    <div class="p-4 sm:ml-64">
+    <div class="divp">
         @yield('content')
     </div>
 
