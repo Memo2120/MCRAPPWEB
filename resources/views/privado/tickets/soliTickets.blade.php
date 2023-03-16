@@ -1,9 +1,9 @@
 @if (count($SolicitudTickets) != 0)
-<h1>Solicitudes de tickets</h1>
 <div class="">
     <div class=" flex-1">
     </div>
     <div class="Div1">
+        <h1>Solicitudes de tickets</h1>
         
         <table class="tabla">
 
@@ -23,9 +23,9 @@
         </table>
         <br>
 
-        <table class="tabla2">
+        @foreach ($SolicitudTickets as $ticket)
+        <table class="tabla2" cellspacing="0">
             <tbody>
-            @foreach ($SolicitudTickets as $ticket)
                 <tr class="tr2">
                     <td class="tdtit">{{$ticket->titulo}}</td>
                     <td class="tddes"><p class="pdes">{{$ticket->descripcion}}</p></td>
@@ -38,13 +38,15 @@
                     {{-- <td class="border px-1 py-1">{{$ticket->id_solicitudTicket}}</td> --}}
                     <td class="tdcre">{{$ticket->created_at}}</td>
                     {{-- <td class="border px-1 py-1">{{$ticket->updated_at}}</td> --}}
-                    <td href="" class="tdbtnbor"><button class="btnborrar">Borrar</button></td>
-                    <td href="" class="tdbtnmod"><button class="btnmodificar">Modificar</button></td>
-                    <td href="" class=""><button class="btnas"><a class="alink" href="{{asset('/asigTechSoli/'.$ticket->id)}}">Asignar Tecnico</a></button></td>
+                    <td href="" class="tdbtnbor">
+                        <button class="btnborrar">Borrar</button>
+                        <button class="btnmodificar">Modificar</button>
+                        <button class="btnas"><a class="alink" href="{{asset('/asigTechSoli/'.$ticket->id)}}">Asignar Tecnico</a></button>
+                    </td>
                 </tr>
-            @endforeach
             </tbody>
         </table>
+        @endforeach
     </div>
     <div class="flex-1"></div>
 </div>

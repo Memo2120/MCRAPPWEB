@@ -9,6 +9,12 @@
 .Div1{
     border-color: black;
     border-radius: 10px;
+    width: 80%;
+}
+.div2{
+    border-color: black;
+    border-radius: 10px;
+    width: 80%;
 }
 
 .tabla{
@@ -21,6 +27,7 @@
     border-top: 10px;
     border: 1px solid;
     border-radius: 10px;
+    
 }
 /* td{
     border: 1px solid;
@@ -105,20 +112,42 @@
     font-family: "Poppins" , sans-serif;
     border-radius: 10px;
     background-color: #009CFF;
+    width: 100px;
 }
 
 .btnmodificar{
+    width: 100px;
     font-size: 15px;
     border-radius: 10px;
-    background-color: #009CFF;
+    background-color: yellow;
 }
 
 .btnborrar{
-    width: 73px;
+    width: 100px;
     font-size: 15px;
     border-radius: 10px;
-    background-color: #009CFF;
+    background-color: red;
+    float: left;
 }
+
+
+/*hovers*/
+.btnas:hover{
+    background-color: #67c5ff;
+    transition: 0.5ms ease-in-out background-color;
+}
+
+.btnmodificar:hover{
+    background-color: rgb(255, 255, 203);
+    transition: 0.5ms ease-in-out background-color;
+}
+
+.btnborrar:hover{
+    background-color: rgb(253, 139, 139);
+    transition: 0.5ms ease-in-out background-color;
+}
+
+/*fin hovers*/
 
 .alink{
     color: black;
@@ -145,8 +174,18 @@
     background-color: #009CFF;
 }
 
-
-
+.tabla{
+    width: 90%;
+}
+.tabla2{
+    width: 100%;
+}
+.tabla3{
+    width: 90%;
+}
+.tabla4{
+    width: 100%;
+}
 /*CSS de los TH*/
 
 .thT{
@@ -210,16 +249,20 @@
     border-radius: 10px;
 } */
 .tabla3{
-    width: 939px;
+    /* width: 939px; */
     border: 1px solid;
     border-radius: 10px;
 }
 
-tr:hover {background-color: #009CFF;}
+tr.tr2:hover, tr.tr4:hover {background-color: #009CFF;  }
 
 .tabla4{
-    
+    margin-bottom: 10px;
     border-top: 10px;
     border: 1px solid;
     border-radius: 10px;
+}
+a{
+ text-decoration: none;   
+ color: black;
 }
