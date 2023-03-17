@@ -213,38 +213,42 @@
 .pDes{
     padding-top: 25px;
     height: 80px;
-    width: 200px;
+    width: 120px;
     overflow: hidden;
     white-space:nowrap;
     text-overflow: ellipsis;
 }
 
 .tdDir{
+    width: 16.6%;
     height: 100px;
     padding: 30px;
 }
 
 .tdT{
+    width: 16.6%;
     height: 100px;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
     padding-left: 30px;
 }
 
 .tdZ{
-    
+    width: 16.6%;
     height: 100px;
-    width: 120px;
 }
 
 .tdEst{
-    padding-left: 20px;
+    padding-left: 40px;
     height: 100px;
-    width: 100px;
+    width: 16.6%;
 }
 
 .tdCre{
     padding-left: 20px;
     height: 100px;
-    width: 150px;
+    width: 16.6%;
 }
 /* td{
     border: 1px solid;

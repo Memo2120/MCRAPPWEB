@@ -1,7 +1,7 @@
 @if (count($tecnicos) != 0)
 <br><br><br><br><br>
 <h1>Tecnicos</h1>
-<section class="home-section">
+<!-- <section class="home-section">
     
 
 
@@ -39,4 +39,4 @@
 <br><br><br><br><br>
 <h1>No hay tecnicos en esta zona</h1>
 @endif
-</section>
+</section> -->

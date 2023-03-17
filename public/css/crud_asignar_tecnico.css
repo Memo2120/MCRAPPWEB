@@ -1,0 +1,41 @@
+th,td{
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.divticketasignar{
+    width: 80%;
+}
+
+.tablaasignartecnico{
+    border: 2px solid;
+    border-color: black;
+    border-radius: 10px;
+}
+
+/*css de los tr*/
+.thdescripcion{
+   /* padding-left: 35%; */
+   width: 100%;
+}
+.tddescripcion{
+    width: 50%;
+    overflow: hidden;
+    text-align: center;
+}
+.thtitulo{
+    padding-left: -30%;
+}
+.tdtitul
+#pdescripcion{
+    display: flex;
+    height: 80px;
+    /* width: 100%; */
+    
+    text-overflow: ellipsis;
+    justify-content: space-around;
+    overflow: hidden; 
+    white-space:nowrap;
+    
+    /* margin-left: -150px; */
+}
