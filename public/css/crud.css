@@ -1,8 +1,8 @@
 .divp{
     margin-top: 50px;
-    margin-left: 350px;
-    width: 1200px;
-    height: 1000px;
+    margin-left: 250px;
+    /* width: 1200px;
+    height: 1000px; */
 }
 
 
@@ -42,22 +42,22 @@
 /*CSS de los TH*/
 
   .thtit{
-    width: 190px;
+    width: 16.6%;
 }
 .thdes{
-    width: 202px;
+    width: 16.6%;
 }
 
 .thdir{
-    width: 156px;
+    width: 16.6%;
 }
 
 .thzona{
-    width: 120px;
+    width: 16.6%;
 }
 
 .thest{
-    width: 100px;
+    width: 16.6%;
 } 
 
 /* .thcre{
@@ -68,18 +68,20 @@
 .pdes{
     padding-top: 25px;
     height: 80px;
-    width: 200px;
+    width: 120px;
     overflow: hidden;
     white-space:nowrap;
     text-overflow: ellipsis;
 }
 
 .tddir{
+    width: 16.6%;
     height: 100px;
     padding: 30px;
 }
 
 .tdtit{
+    width: 16.6%;
     height: 100px;
     padding-left: 30px;
 }
@@ -87,19 +89,19 @@
 .tdzona{
     
     height: 100px;
-    width: 120px;
+    width: 16.6%;
 }
 
 .tdest{
-    padding-left: 20px;
+    padding-left: 40px;
     height: 100px;
-    width: 100px;
+    width: 16.6%;
 }
 
 .tdcre{
     padding-left: 20px;
     height: 100px;
-    width: 150px;
+    width: 16.6%;;
 }
 
 .tr2{
@@ -189,22 +191,22 @@
 /*CSS de los TH*/
 
 .thT{
-    width: 190px;
+    width: 16.6%;
 }
 .thDes{
-    width: 202px;
+    width: 16.6%;
 }
 
 .thDir{
-    width: 156px;
+    width: 16.6%;
 }
 
 .thZ{
-    width: 120px;
+    width: 16.6%;
 }
 
 .thEst{
-    width: 100px;
+    width: 16.6%;
 } 
 
 /*CSS de los TD*/
