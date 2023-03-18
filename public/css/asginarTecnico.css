@@ -1,0 +1,9 @@
+.tabla-tecnicos{
+    min-height: 50px;
+}
+td.datos-tabla-tecnicos{
+    width: 16.6%;
+    text-align: center;
+}
+
+tr.tecnico:hover {background-color: #009CFF;  }

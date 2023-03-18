@@ -1,7 +1,7 @@
 <section class="divticketasignar">
 
-
-<table class="tablaasignartecnico">
+    <h1 style="font-size: 40px">Ticket</h1>
+    <table class="tablaasignartecnico">
     <tr class="">
         <td style="text-align:center" colspan="1" class="thtitulo"> <strong>Titulo:</strong>    {{$ticket->titulo}}</td>
         <td style="text-align:center" colspan="4" class=""> <strong>Telefono:</strong>   {{$ticket->telefono}}</td>
@@ -27,10 +27,10 @@
         <td colspan="2" style="text-align:center" class=""> <strong>Actualizado el:</strong>         {{$ticket->updated_at}}</td>
     </tr>
 
-    <!-- <tr>
+    {{--<tr>
         <td href="" class="">Borrar</td>
         <td href="" class="">Modificar</td>
-    </tr> -->
+    </tr>--}}
 </table>
 
 

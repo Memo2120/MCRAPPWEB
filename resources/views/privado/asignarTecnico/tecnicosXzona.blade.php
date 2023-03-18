@@ -1,42 +1,43 @@
 @if (count($tecnicos) != 0)
 <br><br><br><br><br>
 <h1>Tecnicos</h1>
-<!-- <section class="home-section">
-    
 
-
-<div class=" flex-1">
-    <div></div>
-</div>
-<div class=" ">
-    <table class="shadow-lg bg-white">
-        <thead>
-            <th class="bg-blue-100 border text-left px-1 py-1">Nombre</th>
-            <th class="bg-blue-100 border text-left px-1 py-1">Apellido</th>
-            <th class="bg-blue-100 border text-left px-1 py-1">Puesto</th>
-            <th class="bg-blue-100 border text-left px-1 py-1">Zona</th>
-            <th class="bg-blue-100 border text-left px-1 py-1">Estado</th>
-            <th class="bg-blue-100 border text-left px-1 py-1">id_usuario</th>
-        </thead>
-        <tbody>
-            @foreach ($tecnicos as $tecnico)
-            <tr class="table-info">
-                    <td>{{$tecnico->nombre}}</td>
-                    <td >{{$tecnico->apellido}}</td>
-                    <td >{{$tecnico->puesto}}</td>
-                    <td >{{$tecnico->zona}}</td>
-                    <td >{{$tecnico->estado}}</td>
-                    <td >{{$tecnico->id_usuario}}</td>
-                    <td href="" class="">Seleccionar</td>
+<div class="div2">
+    <div class=" flex-1">
+    </div>
+    {{-- <div class=""> --}}
+        <table class="tabla3">
+            <thead >
+                <th style="width: 17%;" class="bg-blue-100 border text-left px-1 py-1">Nombre</th>
+                <th style="width: 17%;" class="bg-blue-100 border text-left px-1 py-1">Apellido</th>
+                <th style="width: 17%;" class="bg-blue-100 border text-left px-1 py-1">Puesto</th>
+                <th style="width: 17%;" class="bg-blue-100 border text-left px-1 py-1">Zona</th>
+                <th style="width: 17%;" class="bg-blue-100 border text-left px-1 py-1">Estado</th>
+                <th style="width: 17%;" class="bg-blue-100 border text-left px-1 py-1">id_usuario</th>
+            </thead>
+        </table>
+        <br>
+        @foreach ($tecnicos as $tecnico)
+        <table  class="tabla-tecnicos" cellspacing="0">
+            <tbody>
+                <tr class="tecnico">
+                    <td class="datos-tabla-tecnicos" id="nom">{{$tecnico->nombre}}</td>
+                    <td class="datos-tabla-tecnicos" id="ape">{{$tecnico->apellido}}</td>
+                    <td class="datos-tabla-tecnicos" id="puesto">{{$tecnico->puesto}}</td>
+                    <td class="datos-tabla-tecnicos" id="zona">{{$tecnico->zona}}</td>
+                    <td class="datos-tabla-tecnicos" id="estado">{{$tecnico->estado}}</td>
+                    <td class="datos-tabla-tecnicos" id="id">{{$tecnico->id_usuario}}</td>
+                    <td href="" class="tdbtnbor">
+                        <button class="btnmodificar">Seleccionar</button>
+                    </td>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
-</div>
-<div class="flex-1"></div>
+            </tbody>
+        </table>
+        @endforeach
+    </div>
+    <div class="flex-1"></div>
 </div>
 @else
 <br><br><br><br><br>
 <h1>No hay tecnicos en esta zona</h1>
 @endif
-</section> -->

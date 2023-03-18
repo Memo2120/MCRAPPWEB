@@ -9,6 +9,7 @@
     @yield('scriptsArriba')
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     <link rel="stylesheet" href="{{asset('css/crud.css')}}">
+    <link rel="stylesheet" href="{{asset('css/asginarTecnico.css')}}">
     <link rel="stylesheet" href="{{asset('css/crud_asignar_tecnico.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
