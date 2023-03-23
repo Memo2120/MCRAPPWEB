@@ -11,9 +11,10 @@ html, body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    background-color: rgba(0,0,0,0.5);  /*Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
+    overflow-y: scroll;
 }
 
 .fondo{
@@ -25,7 +26,8 @@ html, body{
 }
 
 .bar-titulo{
-    
+    text-align:center;
+    font-size: 2em;
     
     /* padding: 10px; */
     max-width: 100%;
@@ -44,6 +46,23 @@ html, body{
     height: 100%;
     min-width: 100%;
     margin: auto;
+    text-align: center;
+    align-items: center;
+}
+.text_area{
+    width: 75%;
+    height: 60px;
+}
+ #todos{
+    text-align: center;
+    width: 75%;
+ }
+.todos{
+    text-align: center;
+    width: 75%;
+}
+.codigoin,.nombrein,.cantidadin{
+    width: 75%;
 }
 
 .campos{
@@ -51,7 +70,18 @@ html, body{
 }
 
 .btn-crear{
-    padding: 10px;
+    /* padding-top: 10px; */
     /* margin-top: 40px; */
-    float: right;
+    float:right;
+}
+
+label{
+    align-items: center;
+}
+input{
+    border-radius: 5px;
+}
+.img-file{
+    border-radius: 5px;
+    padding-left: 4px;
 }

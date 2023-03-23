@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-    <div>
+    <div class="div_scroll">
         <button id="1" onclick="on(this.id)">Refacciones</button>
         <button id="2" onclick="on(this.id)">Solicitud Tickets</button>
         <button id="3" onclick="on(this.id)">Usuarios</button>

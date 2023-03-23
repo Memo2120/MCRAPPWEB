@@ -15,7 +15,7 @@
                     <br><br>
                     <label for="contrasena">Contraseña</label><br>
                     <input type="password" value="" name="contrasena">
-                    
+                    <br><br>
                     <div class="btn-crear">
                         <button>Crear</button>
                     </div>
