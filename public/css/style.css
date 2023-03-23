@@ -19,6 +19,7 @@
 }
 .sidebar.open{
   width: 250px;
+  margin-right: 0px;
 }
 .sidebar .logo-details{
   height: 60px;

@@ -18,7 +18,9 @@ class SolicitudTicketController extends Controller
     public function index()
     {
         //
+
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -85,6 +87,15 @@ class SolicitudTicketController extends Controller
         
 
     }
+
+    public function modificar($id_soliTicket){
+        
+        $ticket = solicitud_ticket::find($id_soliTicket);
+
+        return $ticket;
+
+    }
+
 
     /**
      * Show the form for editing the specified resource.
