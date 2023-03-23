@@ -30,7 +30,7 @@
                     <td class="tdtit">{{$ticket->titulo}}</td>
                     <td class="tddes"><p class="pdes">{{$ticket->descripcion}}</p></td>
                     <td class="tddir">{{$ticket->direccion}}</td>
-                    <td class="tdzona">{{$ticket->zona}}</td>
+                    <td class="tdzona1">{{$ticket->zona}}</td>
                     <td class="tdest">{{$ticket->estado}}</td>
                     {{-- <td class="border px-1 py-1">{{$ticket->correo}}</td> --}}
                     {{-- <td class="border px-1 py-1">{{$ticket->telefono}}</td> --}}
