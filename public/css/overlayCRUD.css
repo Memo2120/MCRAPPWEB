@@ -1,6 +1,10 @@
 html, body{
     min-height: 100%;
 }
+.div_scroll{
+    margin-left: -140px;
+    text-align: center;
+}
 
 #overlay1, #overlay2, #overlay3, #overlay4, #overlay5 {
     position: fixed; /* Sit on top of the page content */
@@ -85,3 +89,49 @@ input{
     border-radius: 5px;
     padding-left: 4px;
 }
+
+
+/* Hover del menú desplegable */
+.dropbtn {
+    width: 100%;
+    background-color: #009CFF;
+    color: white;
+    padding: 25px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    width: 180px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  .m1{
+    border-radius: 10px;
+    border: 1px solid;
+    width: 300px;
+  }
