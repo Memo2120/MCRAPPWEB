@@ -26,6 +26,7 @@
                         <button>Crear</button>
                     </div>
                 </form>
+            </div>
         </div>
     </div>
 </div>
