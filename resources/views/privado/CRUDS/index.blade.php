@@ -11,23 +11,88 @@
 
 @section('content')
     <div class="div_scroll">
-        <select name="1" id="sel1">
-            <option value="Refacciones" selected="selected" hidden>Refacciones</option>
-            <option value="agregar"><button id="1" onclick="on(this.id)">Agregar</button></option>
-            <option value="mostrar"><button onclick="mostrar">Mostrar</button></option>
-        </select>
-        
-        <button id="2" onclick="on(this.id)">Solicitud Tickets</button>
-        <button id="3" onclick="on(this.id)">Usuarios</button>
-        <button id="4" onclick="on(this.id)">Tecnicos</button>
-        <button id="5" onclick="on(this.id)">Tickets</button>
-    </div>
 
-    <div class="div_1">
+                <div class="dropdown">
+                        <button class="dropbtn">Refacciones</button>
+                    <div class="dropdown-content">
+                        <button style="min-width: 100%" id="1" onclick="on(this.id)">Agregar Refacciones</button>
+                        <button style="min-width: 100%">Mostrar Refacciones</button>
+                    </div>
+                </div>
+
+          
+
+                <div class="dropdown">
+                        <button class="dropbtn">Solicitud Tickets</button>
+                    <div class="dropdown-content">
+                        <button style="min-width: 100%" id="2" onclick="on(this.id)">Agregar Solicitud de Tickets</button>
+                        <button style="min-width: 100%">Mostrar Solicitud de Tickets</button>
+                    </div>
+                </div>
+
         
-        <button onclick="on">Agregar</button>
+
+                <div class="dropdown">
+                        <button class="dropbtn">Usuarios</button>
+                    <div class="dropdown-content">
+                        <button style="min-width: 100%" id="3" onclick="on(this.id)">Agregar Usuarios</button>
+                        <button style="min-width: 100%">Mostrar Usuarios</button>
+                    </div>
+                </div>
+
+
+
+                <div class="dropdown">
+                        <button class="dropbtn">Tecnicos</button>
+                    <div class="dropdown-content">
+                        <button style="min-width: 100%" id="4" onclick="on(this.id)">Agregar Tecnicos</button>
+                        <button style="min-width: 100%">Mostrar Tecnicos</button>
+                    </div>
+                </div>
+
+
+
+                <div class="dropdown">
+                        <button class="dropbtn">Tickets</button>
+                    <div class="dropdown-content">
+                        <button style="min-width: 100%" id="5" onclick="on(this.id)">Agregar Tickets</button>
+                        <button style="min-width: 100%">Mostrar Tickets</button>
+                    </div>
+                </div>
+
+         
     </div>
-    
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div>
+        <table>
+            <tr>
+                <td class="m1">Refacciones</td>
+                <td class="m1">Solicitud de Tickets</td>
+                <td class="m1">Usuarios</td>
+                <td class="m1">Tecnicos</td>
+                <td class="m1">Tickets</td>
+            </tr>
+            <tr>
+                <td class="m1">1</td>
+                <td class="m1">2</td>
+                <td class="m1">3</td>
+                <td class="m1">4</td>
+                <td class="m1">5</td>
+            </tr>
+            <tr>
+                <td class="m1">1</td>
+                <td class="m1">2</td>
+                <td class="m1">3</td>
+                <td class="m1">4</td>
+                <td class="m1">5</td>
+            </tr>
+        </table>
+    </div>
+   
     @include('privado/CRUDS/refaccionesCRUD')
     @include('privado/CRUDS/usersCRUD')
     @include('privado/CRUDS/soliTicketsCRUD')
