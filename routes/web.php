@@ -34,3 +34,5 @@ Route::get('/solicitudesAct', [SolicitudTicketController::class, 'show']);
 Route::get('/ticketsNoAsignados', [TicketController::class, 'index']);
 Route::get('/asigTech/{ticket}', [TicketController::class, 'show']);
 Route::get('/asigTechSoli/{ticket}', [SolicitudTicketController::class, 'show']);
+
+Route::view('/crudrefacciones','privado/refacciones/index');

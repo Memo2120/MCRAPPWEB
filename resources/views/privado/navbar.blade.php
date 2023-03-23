@@ -8,7 +8,7 @@
     <ul class="nav-list">
     
       <li>
-        <a href="#">
+        <a href="{{asset('ticketsNoAsignados')}}">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Tickets Sin asignar</span>
         </a>
@@ -17,7 +17,7 @@
       <li>
 
 
-       <a href="#">
+       <a href="{{asset('asigTech/')}}">
          <i class='bx bx-user' ></i>
          <span class="links_name">Tecnicos</span>
        </a>

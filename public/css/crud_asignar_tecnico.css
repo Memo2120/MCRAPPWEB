@@ -1,7 +1,7 @@
-th,td{
+/* th,td{
     border: 1px solid;
     border-radius: 10px;
-}
+} */
 
 .divticketasignar{
     width: 80%;
@@ -15,16 +15,22 @@ th,td{
 
 /*css de los tr*/
 .thdescripcion{
+    border: 1px solid;
+    border-radius: 10px;
    /* padding-left: 35%; */
    width: 100%;
 }
 .tddescripcion{
+    border: 1px solid;
+    border-radius: 10px;
     width: 50%;
     overflow: hidden;
     text-align: center;
 }
-.thtitulo{
+.tdtitulo{
     padding-left: -30%;
+    border: 1px solid;
+    border-radius: 10px;
 }
 .tdtitul
 #pdescripcion{
@@ -39,3 +45,11 @@ th,td{
     
     /* margin-left: -150px; */
 }
+.tdtelefono,.tdcreadoel,.tdcorreo,
+.tddireccion,.tdzona,.tdestado,
+.tdtecnicoasignado,.tdsolicitudticket,
+.tdactualizadoel{
+    border: 1px solid;
+    border-radius: 10px;
+}
+
