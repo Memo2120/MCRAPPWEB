@@ -73,6 +73,14 @@ class TicketController extends Controller
 
     }
 
+    public function modificar($id_ticket){
+        
+        $ticket = ticket::find($id_ticket);
+        $ticket->type = 'ticket';
+        return $ticket;
+
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -92,9 +100,18 @@ class TicketController extends Controller
      * @param  \App\Models\ticket  $ticket
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ticket $ticket)
+    public function update(Request $request, ticket $ticket, $id)
     {
         //
+        $ticket = ticket::find($id);
+        $ticket->titulo = $request->input('titulo');
+        $ticket->descripcion = $request->input('descripcion');
+        $ticket->direccion = $request->input('direccion');
+        $ticket->zona = $request->input('zona');
+        $ticket->estado = $request->input('estado');
+        $ticket->save();
+
+        return redirect()->action([TicketController::class, 'index']);
     }
 
     /**
@@ -103,8 +120,13 @@ class TicketController extends Controller
      * @param  \App\Models\ticket  $ticket
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ticket $ticket)
+    public function destroy(ticket $ticket, $id)
     {
         //
+        $ticket = ticket::find($id);
+        $ticket->estado = 'Inactivo';
+        $ticket->save();
+
+        return redirect()->action([TicketController::class, 'index']);
     }
 }

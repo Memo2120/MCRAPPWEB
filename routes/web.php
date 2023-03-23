@@ -33,8 +33,15 @@ Route::get('/solicitudesAct', [SolicitudTicketController::class, 'show']);
 
 Route::get('/ticketsNoAsignados', [TicketController::class, 'index']);
 Route::get('/asigTech/{ticket}', [TicketController::class, 'show']);
+Route::get('/modificarTicket/{id_ticket}', [TicketController::class, 'modificar']);
+Route::post('/updateTicket/{id}', [TicketController::class, 'update']);
+Route::get('/eraseTicket/{id}', [TicketController::class, 'destroy']);
+
+
 Route::get('/asigTechSoli/{ticket}', [SolicitudTicketController::class, 'show']);
 Route::get('/modificarSoliTicket/{id_soliTicket}', [SolicitudTicketController::class, 'modificar']);
+Route::post('/updateSoliTicket/{id_soli}', [SolicitudTicketController::class, 'update']);
+Route::get('/eraseSoliTicket/{id}', [SolicitudTicketController::class, 'destroy']);
 
 Route::view('/crudrefacciones','privado/refacciones/index');
 

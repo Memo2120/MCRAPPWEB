@@ -2,7 +2,6 @@
 
 @section('css')
 <link rel="stylesheet" href="{{asset('css/overlayCRUD.css')}}">
-    
 @endsection
 
 @section('scriptsAbajo')

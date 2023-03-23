@@ -91,7 +91,7 @@ class SolicitudTicketController extends Controller
     public function modificar($id_soliTicket){
         
         $ticket = solicitud_ticket::find($id_soliTicket);
-
+        $ticket->type = 'soliTicket';
         return $ticket;
 
     }
@@ -115,9 +115,19 @@ class SolicitudTicketController extends Controller
      * @param  \App\Models\solicitud_ticket  $solicitud_ticket
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, solicitud_ticket $solicitud_ticket)
+    public function update(Request $request, solicitud_ticket $solicitud_ticket, $id)
     {
         //
+        $ticket = solicitud_ticket::find($id);
+        $ticket->titulo = $request->input('titulo');
+        $ticket->descripcion = $request->input('descripcion');
+        $ticket->direccion = $request->input('direccion');
+        $ticket->zona = $request->input('zona');
+        $ticket->estado = $request->input('estado');
+        $ticket->save();
+
+        return redirect()->action([TicketController::class, 'index']);
+
     }
 
     /**
@@ -126,9 +136,14 @@ class SolicitudTicketController extends Controller
      * @param  \App\Models\solicitud_ticket  $solicitud_ticket
      * @return \Illuminate\Http\Response
      */
-    public function destroy(solicitud_ticket $solicitud_ticket)
+    public function destroy(solicitud_ticket $solicitud_ticket, $id)
     {
         //
+        $ticket = solicitud_ticket::find($id);
+        $ticket->estado = 'Inactivo';
+        $ticket->save();
+
+        return redirect()->action([TicketController::class, 'index']);
     }
 
 

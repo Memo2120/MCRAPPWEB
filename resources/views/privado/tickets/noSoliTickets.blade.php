@@ -37,8 +37,9 @@
                     <td class="tdCre">{{$ticket->created_at}}</td>
                     {{-- <td class="border px-1 py-1">{{$ticket->updated_at}}</td> --}}
                     <td href="" class="tdbtnbor">
-                        <button class="btnborrar">Borrar</button>
-                        <button class="btnmodificar"><a href="{{asset('')}}">Modificar</a></button>
+                        <button class="btnborrar"><a href="{{asset('/eraseTicket/'.$ticket->id)}}">Borrar</a></button>
+                        <?php $urlS = strval(asset('/modificarTicket/'.$ticket->id)); $urlAction = asset('/updateTicket/'.$ticket->id);?>
+                        <button class="btnmodificar" onclick="obtenerDatos('{{$urlS}}', '{{$urlAction}}');">Modificar</button>
                         <button class="btnas"><a href="{{asset('/asigTech/'.$ticket->id)}}">Asignar Tecnico</a></button>
                     </td>
                 </tr>
