@@ -109,7 +109,7 @@ class tecnicosController extends Controller
         }else{
             $tecnico->foto = 'tecnico.png';
         }
-
+        
         $tecnico->zona = $request->input('zona');
         $tecnico->estado = $request->input('estado');
         // $tecnico->nombre = $req->input('name');

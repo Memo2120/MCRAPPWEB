@@ -10,13 +10,13 @@
 
 
                             <!-- AQUI AGREGAR MAPA -->
-                            <p class="mb-4 m-md-0">Direccion</p>
+                            <p class="mb-4 m-md-0">Rio atenguillo #1314 local B</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="text-md-center">
                             <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Correo</h5>
-                            <p class="mb-4 m-md-0">reparacion@linea.com</p>
+                            <p class="mb-4 m-md-0">multiserviciosCRA@gmail.com</p>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -45,14 +45,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-12 mb-5">
+            {{-- <div class="col-lg-5 col-md-12 mb-5">
                 <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Mapa</h5>
                 
                 <div class="w-100">
                     Aqui va el mapa
                     <!-- AQUI COLOCAR EL MAPA ********************** -->
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <div class="container-fluid bg-dark text-white text-center border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .05) !important;">

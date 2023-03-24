@@ -123,20 +123,20 @@
             <div class="row">
                 <div class="col-md-6 border-right border-primary">
                     <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                        <h3 class="mb-4">Why Switch to Solar?</h3>
-                        <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Vero dolor amet no eos ipsum erat</h5>
-                        <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Lorem tempor tempor gubergren dolor dolor dolor</h5>
-                        <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Nonumy tempor dolores sadipscing duo</h5>
-                        <h5 class="mb-0"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Kasd dolor ea dolores ut nonumy</h5>
+                        <h3 class="mb-4">Multiservicios CRA</h3>
+                        <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Mas de 6 años de experiencia</h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Expertos en linea blanca</h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Contacto en menos de 24hrs</h5>
+                        <h5 class="mb-0"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Garantia de 30 dias</h5>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="text-center text-md-left ml-md-3">
                         <h3 class="mb-4">¿Por qué elegirnos?</h3>
-                        <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>Vero dolor amet no eos ipsum erat</h5>
-                        <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>Lorem tempor tempor gubergren dolor dolor dolor</h5>
-                        <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>Nonumy tempor dolores sadipscing duo</h5>
-                        <h5 class="mb-0"><i class="fa fa-check text-success mr-2"></i>Kasd dolor ea dolores ut nonumy</h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>La cotizacion es gratuita</h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>Usted puede hacer una solicitud de servicio</h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>Contacto directo con el tecnico</h5>
+                        <h5 class="mb-0"><i class="fa fa-check text-success mr-2"></i>Refacciones de fuentes confiables</h5>
                     </div>
                 </div>
                 <div class="col-md-12 text-center pt-3">
@@ -160,15 +160,15 @@
                     <div class="owl-carousel testimonial-carousel">
                         <div class="text-center">
                             <img class="img-fluid mx-auto mb-3" src="{{asset('img/testimonial-1.jpg')}}" style="width: 100px;">
-                            <p style="font-size: 22px;">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                            <h4>Client Name</h4>
-                            <span>Profession</span>
+                            <p style="font-size: 22px;">¡WOW! Nunca habia visto que un tecnico hiciera un diagnostico tan rapido, y que puedira arreglar mi probelma de una manera tan sencilla. 10/10</p>
+                            <h4>Josh Peck</h4>
+                            <span>Critico de restaurantes</span>
                         </div>
                         <div class="text-center">
                             <img class="img-fluid mx-auto mb-3" src="{{asset('img/testimonial-2.jpg')}}" style="width: 100px;">
-                            <p style="font-size: 22px;">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                            <h4>Client Name</h4>
-                            <span>Profession</span>
+                            <p style="font-size: 22px;">Sin duda uno de los mejores servicios de reparacion a linea blanca, un conocido me recomendo a esta empresa pero yo estaba esceptico. Sin embargo mis expectativas fueron superadas en cuanto el tecnico volvio con la pieza indicada y a tiempo.</p>
+                            <h4>Juan Aguita</h4>
+                            <span>E-sports manager</span>
                         </div>
                     </div>
                 </div>

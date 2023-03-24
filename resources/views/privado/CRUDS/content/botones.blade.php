@@ -22,7 +22,7 @@
             <button class="dropbtn">Usuarios</button>
         <div class="dropdown-content">
             <button style="min-width: 100%" id="3" onclick="on(this.id)">Agregar Usuarios</button>
-            <button style="min-width: 100%">Mostrar Usuarios</button>
+            <button style="min-width: 100%"> <a href="{{asset('showUsuarios')}}">Mostrar Usuarios</a> </button>
         </div>
     </div>
 
@@ -30,7 +30,7 @@
             <button class="dropbtn">Tecnicos</button>
         <div class="dropdown-content">
             <button style="min-width: 100%" id="4" onclick="on(this.id)">Agregar Tecnicos</button>
-            <button style="min-width: 100%">Mostrar Tecnicos</button>
+            <button style="min-width: 100%"> <a href="{{asset('showTecnicos')}}">Mostrar Tecnicos</a> </button>
         </div>
     </div>
 
