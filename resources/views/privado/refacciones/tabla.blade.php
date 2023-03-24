@@ -24,12 +24,12 @@
         <table class="tabla2" cellspacing="0">
             <tbody>
                 <tr class="tr2">
-                    <td class="tdcrdrefnom">{{$refaccion->nombre}}</td>
+                    <td class="tdcrdrefnom"><p class="pdes1">{{$refaccion->nombre}}</p></td>
                     <td class="tdcrdrefcant">{{$refaccion->cantidad}}</td>
                     <td class="tdcrdredes"><p class="pdes1">{{$refaccion->descripcion}}</p></td>
                     <td class="tdcrdrefimg"><img src="{{asset('img/refacciones/'.$refaccion->imagenes)}}" alt="" width="60px" height="60px"></td>
-                    <td class="tdcrdrefest">{{$refaccion->estado}}</td>
-                    <td class="tdcrdrefcod">{{$refaccion->codigo}}</td>
+                    <td class="tdcrdrefest"><p class="pdes1">{{$refaccion->estado}}</p></td>
+                    <td class="tdcrdrefcod"><p class="pdes1">{{$refaccion->codigo}}</p></td>
                     <td class="tdcrdrefcreat"><p class="pdes1">{{$refaccion->created_at}}</p></td>
                     <td class="tdcrdrefact"><p class="pdes1">{{$refaccion->updated_at}}</p></td>
                     <td href="" class="tdbtnbor">
