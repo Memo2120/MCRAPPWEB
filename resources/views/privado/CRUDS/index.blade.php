@@ -15,7 +15,7 @@
                         <button class="dropbtn">Refacciones</button>
                     <div class="dropdown-content">
                         <button style="min-width: 100%" id="1" onclick="on(this.id)">Agregar Refacciones</button>
-                        <button style="min-width: 100%">Mostrar Refacciones</button>
+                        <button style="min-width: 100%"><a href="{{asset('showSpareParts')}}">Mostrar refacciones</a></button>
                     </div>
                 </div>
 

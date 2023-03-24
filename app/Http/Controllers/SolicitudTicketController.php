@@ -81,9 +81,10 @@ class SolicitudTicketController extends Controller
             return ($a < $b) ? -1 : 1;
         });
         // dd($tecnicos);
-
+        $tipoTicket = 'SoliTicket';
         return view('privado/asignarTecnico/index')->with('ticket', solicitud_ticket::find($id))
-                                             ->with('tecnicos',$tecnicos);
+                                                   ->with('tecnicos',$tecnicos)
+                                                   ->with('tipoTicket',$tipoTicket);
         
 
     }
@@ -128,6 +129,12 @@ class SolicitudTicketController extends Controller
 
         return redirect()->action([TicketController::class, 'index']);
 
+    }
+
+    public function asigTecnico($solicitud_id, $tecnico_id){
+        DB::select("CALL aceptarSolicitud(".$solicitud_id.",".$tecnico_id.")");
+
+        return redirect()->action([TicketController::class, 'index']);
     }
 
     /**

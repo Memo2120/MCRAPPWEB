@@ -28,7 +28,11 @@
                     <td class="datos-tabla-tecnicos" id="estado">{{$tecnico->estado}}</td>
                     <td class="datos-tabla-tecnicos" id="id">{{$tecnico->id_usuario}}</td>
                     <td href="" class="tdbtnbor">
-                        <button class="btnmodificar">Seleccionar</button>
+                        @if($tipoTicket == "SoliTicket")
+                            <button class="btnmodificar"><a href="{{asset('asigTecnicoSoliTicket/'.$ticket->id.'/'.$tecnico->id)}}">Seleccionar</a></button>                            
+                        @elseif($tipoTicket == "Ticket")
+                            <button class="btnmodificar"><a href="{{asset('asigTecnicoTicket/'.$ticket->id.'/'.$tecnico->id)}}">Seleccionar</a></button>
+                        @endif
                     </td>
                 </tr>
             </tbody>

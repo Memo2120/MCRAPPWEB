@@ -6,6 +6,8 @@ use App\Models\solicitud_ticket;
 use App\Models\tecnico;
 use App\Models\ticket;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class TicketController extends Controller
 {
@@ -67,9 +69,10 @@ class TicketController extends Controller
             return ($a < $b) ? -1 : 1;
         });
         // dd($tecnicos);
-
+        $tipoTicket = 'Ticket';
         return view('privado//asignarTecnico/index')->with('ticket', ticket::find($id))
-                                             ->with('tecnicos',$tecnicos);
+                                                    ->with('tecnicos',$tecnicos)
+                                                    ->with('tipoTicket', $tipoTicket);
 
     }
 
@@ -109,6 +112,15 @@ class TicketController extends Controller
         $ticket->direccion = $request->input('direccion');
         $ticket->zona = $request->input('zona');
         $ticket->estado = $request->input('estado');
+        $ticket->save();
+
+        return redirect()->action([TicketController::class, 'index']);
+    }
+
+    public function asigTecnico($ticket_id, $tecnico_id){
+        $ticket = ticket::find($ticket_id);
+        $ticket->estado = 'Pendiente';
+        $ticket->tecnicoAsignado = $tecnico_id;
         $ticket->save();
 
         return redirect()->action([TicketController::class, 'index']);

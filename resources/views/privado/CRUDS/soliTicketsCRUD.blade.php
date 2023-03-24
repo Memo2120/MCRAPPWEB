@@ -7,6 +7,7 @@
             </div>
             <div class="campos">
                 <form action="" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <label for="name">Titulo</label><br>
                     <input  class="todos" type="text" value="" name="name">
                     <br><br>

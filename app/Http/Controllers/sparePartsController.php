@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\sparePart;
 use Illuminate\Http\Request;
 
 class sparePartsController extends Controller
@@ -14,6 +15,7 @@ class sparePartsController extends Controller
     public function index()
     {
         //
+        return view('privado/refacciones/index')->with('refacciones', sparePart::whereNotIn('estado', ['Inactivo'])->get());
     }
 
     /**
@@ -21,9 +23,28 @@ class sparePartsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $req)
     {
         //
+        $refa = new sparePart();
+        $refa->nombre = $req->input('name');
+        $refa->cantidad = $req->input('cantidad');
+        $refa->descripcion = $req->input('descripcion');
+
+        if($foto_refaccion = $req->file('imagen')){
+            $destino = 'img/refacciones';
+            $origen = $foto_refaccion->getClientOriginalName();
+            $foto_refaccion->move($destino, $origen); 
+            $refa->imagenes = $origen;
+        }else{
+            $refa->imagenes = 'refaccionPlaceholder.jpg';
+        }
+        
+        $refa->estado = 'Activo';
+        $refa->codigo = $req->input('codigo');
+        $refa->save();
+
+        return redirect()->action([sparePartsController::class, 'index']);
     }
 
     /**
@@ -57,6 +78,9 @@ class sparePartsController extends Controller
     public function edit($id)
     {
         //
+        $refa = sparePart::find($id);
+        return $refa;
+
     }
 
     /**
@@ -66,9 +90,30 @@ class sparePartsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $req, $id)
     {
         //
+        $refa = sparePart::find($id);
+        $refa->nombre = $req->input('name');
+        $refa->cantidad = $req->input('cantidad');
+        $refa->descripcion = $req->input('descripcion');
+
+        if($foto_refaccion = $req->file('imagen')){
+            $destino = 'img/refacciones';
+            $origen = $foto_refaccion->getClientOriginalName();
+            $foto_refaccion->move($destino, $origen); 
+            $refa->imagenes = $origen;
+        }
+        // else{
+        //     $refa->imagenes = 'refaccionPlaceholder.jpg';
+        // }
+        
+        $refa->estado = $req->input('estado');
+        $refa->codigo = $req->input('codigo');
+        $refa->save();
+
+
+        return redirect()->action([sparePartsController::class, 'index']);
     }
 
     /**
@@ -80,5 +125,10 @@ class sparePartsController extends Controller
     public function destroy($id)
     {
         //
+        $refa = sparePart::find($id);
+        $refa->estado = 'Inactivo';
+        $refa->save();
+
+        return redirect()->action([sparePartsController::class, 'index']);
     }
 }

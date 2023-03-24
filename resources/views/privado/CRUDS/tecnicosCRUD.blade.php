@@ -7,6 +7,7 @@
             </div>
             <div class="campos">
                 <form action="" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <label for="foto">Foto</label><br>
                     <input class="img-file" type="file" value="" name="foto" >
                     <br><br>

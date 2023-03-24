@@ -49,7 +49,7 @@
     </li>
 
     <li>
-      <a href="{{asset('')}}">
+      <a href="{{asset('showSpareParts')}}">
         <i class='bx bx-cog' ></i>
         <span class="links_name">Refacciones</span>
       </a>
