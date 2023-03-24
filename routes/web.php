@@ -3,6 +3,7 @@
 use App\Http\Controllers\SolicitudTicketController;
 use App\Http\Controllers\sparePartsController;
 use App\Http\Controllers\TicketController;
+use App\Http\Controllers\tecnicosController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\top5Controller;
 use Illuminate\Support\Facades\Route;
@@ -60,6 +61,11 @@ Route::post('/updateUsuarios/{id}', [UsersController::class, 'update']);
 Route::get('/editUsuarios/{id}', [UsersController::class, 'edit']);
 Route::get('/removeUsuarios/{id}', [UsersController::class, 'destroy']);
 
+Route::post('/crTecnico',[tecnicosController::class,'create']);
+Route::get('/showTecnicos', [tecnicosController::class, 'index']);
+Route::post('/updateTecnicos/{id}',[tecnicosController::class,'update']);
+Route::get('/editTecnicos/{id}',[tecnicosController::class,'edit']);
+Route::get('/removeTecnicos/{id}',[tecnicosController::class,'destroy']);
 
 Route::view('/crudrefacciones','privado/refacciones/index');
 

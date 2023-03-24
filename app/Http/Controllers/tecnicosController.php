@@ -15,6 +15,8 @@ class tecnicosController extends Controller
     public function index()
     {
         //
+        return view('privado/tecnicos/index')
+        ->with('tecnicos',tecnico::whereNotIn('estado',['Inactivo'])->get());
     }
 
     /**
@@ -22,9 +24,30 @@ class tecnicosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $req)
     {
         //
+        $tecnico = new tecnico();
+        $tecnico->nombre = $req->input('name');
+        $tecnico->apellido = $req->input('apellido');
+        $tecnico->puesto = $req->input('puesto');
+        $tecnico->domicilio = $req->input('domicilio');
+
+        if($foto_tecnico = $req->file('imagen')){
+            $destino = 'img/tecnicos';
+            $origen = $foto_tecnico->getClientOriginalName();
+            $foto_tecnico->move($destino, $origen); 
+            $tecnico->foto = $origen;
+        }else{
+            $tecnico->foto = 'tecnico.png';
+        }
+
+        $tecnico->zona = $req->input('zona');
+        $tecnico->estado = 'Activo';
+        // $tecnico->nombre = $req->input('name');
+        $tecnico->save();
+
+        return redirect()->action([tecnicosController::class,'index']);
     }
 
     /**
@@ -58,6 +81,8 @@ class tecnicosController extends Controller
     public function edit($id)
     {
         //
+        $tecnico = tecnico::find($id);
+        return $tecnico;
     }
 
     /**
@@ -70,6 +95,27 @@ class tecnicosController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $tecnico = tecnico::find($id);
+        $tecnico->nombre = $request->input('name');
+        $tecnico->apellido = $request->input('apellido');
+        $tecnico->puesto = $request->input('puesto');
+        $tecnico->domicilio = $request->input('domicilio');
+
+        if($foto_tecnico = $request->file('imagen')){
+            $destino = 'img/tecnicos';
+            $origen = $foto_tecnico->getClientOriginalName();
+            $foto_tecnico->move($destino, $origen); 
+            $tecnico->foto = $origen;
+        }else{
+            $tecnico->foto = 'tecnico.png';
+        }
+
+        $tecnico->zona = $request->input('zona');
+        $tecnico->estado = $request->input('estado');
+        // $tecnico->nombre = $req->input('name');
+        $tecnico->save();
+
+        return redirect()->action([tecnicosController::class,'index']);
     }
 
     /**
@@ -81,5 +127,10 @@ class tecnicosController extends Controller
     public function destroy($id)
     {
         //
+        $tecnico = tecnico::find($id);
+        $tecnico->estado = 'Inactivo';
+        $tecnico->save();
+
+        return redirect()->action([tecnicosController::class, 'index']);
     }
 }
