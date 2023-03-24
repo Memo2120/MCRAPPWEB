@@ -3,6 +3,8 @@
 use App\Http\Controllers\SolicitudTicketController;
 use App\Http\Controllers\sparePartsController;
 use App\Http\Controllers\TicketController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\top5Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,4 +63,11 @@ Route::get('/removeUsuarios/{id}', [UsersController::class, 'destroy']);
 
 Route::view('/crudrefacciones','privado/refacciones/index');
 
-Route::view('btoones', 'privado/CRUDS/index');
+// Route::view('btoones', 'privado/CRUDS/index');
+Route::get('btoones', [top5Controller::class, 'allTop5']);
+
+
+
+
+
+Route::get('/pruebaTop5Usuarios', [UsersController::class, 'topFive']);

@@ -21,12 +21,15 @@
     width: 939px;
     border: 1px solid;
     border-radius: 10px;
+    background-color: black;
+    color: white;
 }
 
 .tabla2{
     border-top: 10px;
     border: 1px solid;
     border-radius: 10px;
+    
     
 }
 /* td{
@@ -41,8 +44,9 @@
 
 /*CSS de los TH*/
 
-  .thtit{
+.thtit{
     width: 16.6%;
+    
 }
 .thdes{
     width: 16.6%;
@@ -113,7 +117,7 @@
 .btnas{
     font-family: "Poppins" , sans-serif;
     border-radius: 10px;
-    background-color: #009CFF;
+    background-color: #79ccff;
     width: 100px;
 }
 
@@ -121,14 +125,14 @@
     width: 100px;
     font-size: 15px;
     border-radius: 10px;
-    background-color: yellow;
+    background-color: rgb(255, 255, 96);
 }
 
 .btnborrar{
     width: 100px;
     font-size: 15px;
     border-radius: 10px;
-    background-color: red;
+    background-color: rgb(255, 121, 121);
     float: left;
 }
 
@@ -140,7 +144,7 @@
 }
 
 .btnmodificar:hover{
-    background-color: rgb(255, 255, 203);
+    background-color: rgb(255, 255, 255);
     transition: 0.5ms ease-in-out background-color;
 }
 
@@ -184,9 +188,12 @@
 }
 .tabla3{
     width: 90%;
+    background-color: black;
+    color: white
 }
 .tabla4{
     width: 100%;
+    
 }
 /*CSS de los TH*/
 
@@ -260,7 +267,7 @@
     border-radius: 10px;
 }
 
-tr.tr2:hover, tr.tr4:hover {background-color: #009CFF;  }
+tr.tr2:hover, tr.tr4:hover {background-color: #90d4ff;  }
 
 .tabla4{
     margin-bottom: 10px;

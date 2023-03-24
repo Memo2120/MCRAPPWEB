@@ -94,7 +94,7 @@ input{
 /* Hover del menú desplegable */
 .dropbtn {
     width: 100%;
-    background-color: #009CFF;
+    background-color: #000000;
     color: white;
     padding: 25px;
     font-size: 16px;
@@ -128,10 +128,23 @@ input{
   
   .dropdown:hover .dropdown-content {display: block;}
   
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .dropdown:hover .dropbtn {background-color: #009CFF;}
 
   .m1{
     border-radius: 10px;
     border: 1px solid;
     width: 300px;
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  .tablesTop5{
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid;
+  }
+
+  .tablesTop5 tr:hover{
+    border-radius: 10px;
+    background-color: rgb(238, 238, 238);
   }
