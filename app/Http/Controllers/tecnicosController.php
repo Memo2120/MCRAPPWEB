@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\tecnico;
 use Illuminate\Http\Request;
 
 class tecnicosController extends Controller
