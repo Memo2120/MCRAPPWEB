@@ -65,7 +65,7 @@
     padding-right: 190px; 
 } */
 /*CSS de los TD*/
-.pdes{
+.pdes,.pdes1{
     padding-top: 25px;
     height: 80px;
     width: 120px;
@@ -271,4 +271,72 @@ tr.tr2:hover, tr.tr4:hover {background-color: #009CFF;  }
 a{
  text-decoration: none;   
  color: black;
+}
+
+
+
+/*CSS del crud de refacciones*/
+.tdcrdrefnom{
+    padding-left: 20px;
+    width: 12.5%;
+}
+.tdcrdrefcant{
+    text-align:center;
+    width: 12.5%;
+}
+.tdcrdrefdes{
+    width: 12.5%;
+}
+.tdcrdrefimg{
+    width: 12.5%;
+    padding-left: 40px;
+}
+.tdcrdrefest{
+    padding-left: 40px;
+    width: 12.5%;
+}
+.tdcrdrefcod{
+    width: 12.5%;
+}
+.tdcrdrefcreat{
+    width: 12.5%;
+}
+.tdcrdrefact{
+    width: 12.5%;
+}
+
+.thcrdrefnom{
+    width: 11.25%;
+}
+.thcrdrefcant{
+    width: 11.25%;
+}
+.thcrdrefdes{
+    width: 11.25%;
+}
+.thcrdrefimg{
+    width: 11.25%;
+}
+.thcrdrefest{
+    width: 11.25%;
+}
+.thcrdrefcod{
+    width: 11.25%;
+}
+.thcrdrefcreat{
+    width: 11.25%;
+}
+.thcrdrefact{
+    width: 11.25%;
+}
+
+@media (max-width: 800px) {
+    .pdes1{
+        padding-top: 25px;
+        height: 80px;
+        width: 120px;
+        overflow: hidden;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+    }
 }

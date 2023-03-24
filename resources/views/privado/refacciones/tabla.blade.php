@@ -8,14 +8,14 @@
         <table class="tabla">
 
             <thead class="">
-                <th class="thtit">Nombre</th> 
-                <th class="thdes">Cantidad</th>
-                <th class="thdir">Descripcion</th>
-                <th class="thzona">Imagen</th>
-                <th class="thest">Estado</th>
-                <th class="thest">Codigo</th>
-                <th class="thcre">Creado el</th>
-                <th class="thcre">Actualizado el</th>
+                <th class="thcrdrefnom">Nombre</th> 
+                <th class="thcrdrefcant">Cantidad</th>
+                <th class="thcrdrefdes">Descripcion</th>
+                <th class="thcrdrefimg">Imagen</th>
+                <th class="thcrdrefest">Estado</th>
+                <th class="thcrdrefcod">Codigo</th>
+                <th class="thcrdrefcreat">Creado el</th>
+                <th class="thcrdrefact">Actualizado el</th>
             </thead>
         </table>
         <br>
@@ -24,14 +24,14 @@
         <table class="tabla2" cellspacing="0">
             <tbody>
                 <tr class="tr2">
-                    <td class="tdtit">{{$refaccion->nombre}}</td>
-                    <td class="tddes"><p class="pdes">{{$refaccion->cantidad}}</p></td>
-                    <td class="tddir">{{$refaccion->descripcion}}</td>
-                    <td class="tdzona1"><img src="{{asset('img/refacciones/'.$refaccion->imagenes)}}" alt="" height="100%"></td>
-                    <td class="tdest">{{$refaccion->estado}}</td>
-                    <td class="tdest">{{$refaccion->codigo}}</td>
-                    <td class="tdcre">{{$refaccion->created_at}}</td>
-                    <td class="tdcre">{{$refaccion->updated_at}}</td>
+                    <td class="tdcrdrefnom">{{$refaccion->nombre}}</td>
+                    <td class="tdcrdrefcant">{{$refaccion->cantidad}}</td>
+                    <td class="tdcrdredes"><p class="pdes1">{{$refaccion->descripcion}}</p></td>
+                    <td class="tdcrdrefimg"><img src="{{asset('img/refacciones/'.$refaccion->imagenes)}}" alt="" width="60px" height="60px"></td>
+                    <td class="tdcrdrefest">{{$refaccion->estado}}</td>
+                    <td class="tdcrdrefcod">{{$refaccion->codigo}}</td>
+                    <td class="tdcrdrefcreat"><p class="pdes1">{{$refaccion->created_at}}</p></td>
+                    <td class="tdcrdrefact"><p class="pdes1">{{$refaccion->updated_at}}</p></td>
                     <td href="" class="tdbtnbor">
                         <button class="btnborrar"><a href="{{asset('removeSpareParts/'.$refaccion->id)}}">Borrar</a></button>
                         <button class="btnmodificar"  onclick="obtenerDatos('{{asset('editSpareParts/'.$refaccion->id)}}', '{{asset('updateSpareParts/'.$refaccion->id)}}'); " >Modificar</button>

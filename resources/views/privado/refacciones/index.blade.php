@@ -2,7 +2,8 @@
 
 
 @section('css')
-<link rel="stylesheet" href="{{asset('css/overlayCRUD.css')}}">
+<link rel="stylesheet"  href="{{asset('css/overlayCRUD.css')}}">
+<link rel="stylesheet" media="(max-width: 800px)" href="{{asset('css/crud.css')}}">
 @endsection
 
 @section('scriptsArriba')
