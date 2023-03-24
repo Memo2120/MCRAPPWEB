@@ -52,6 +52,12 @@ Route::post('/updateSpareParts/{id}', [sparePartsController::class, 'update']);
 Route::get('/editSpareParts/{id}', [sparePartsController::class, 'edit']);
 Route::get('/removeSpareParts/{id}', [sparePartsController::class, 'destroy']);
 
+Route::post('/crUsuario', [UsersController::class, 'create']);
+Route::get('/showUsuarios', [UsersController::class, 'index']);
+Route::post('/updateUsuarios/{id}', [UsersController::class, 'update']);
+Route::get('/editUsuarios/{id}', [UsersController::class, 'edit']);
+Route::get('/removeUsuarios/{id}', [UsersController::class, 'destroy']);
+
 
 Route::view('/crudrefacciones','privado/refacciones/index');
 

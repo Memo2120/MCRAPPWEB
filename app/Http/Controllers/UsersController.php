@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -14,6 +15,8 @@ class UsersController extends Controller
     public function index()
     {
         //
+        return view('privado/usuarios/index')
+        ->with('usuarios', User::whereNotIn('estado', ['Inactivo'])->get());
     }
 
     /**
@@ -21,9 +24,19 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $requ)
     {
         //
+        $usua = new User();
+        $usua->name = $requ->input('name');
+        $usua->tipo = $requ->input('tipo');
+        $usua->password = $requ->input('password');
+        $usua->estado = 'Activo';
+
+        $usua->save();
+
+        return redirect()->action([UsersController::class, 'index']);
+
     }
 
     /**
@@ -57,6 +70,8 @@ class UsersController extends Controller
     public function edit($id)
     {
         //
+        $usua = User::find($id);
+        return $usua;
     }
 
     /**
@@ -66,9 +81,17 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $requ, $id)
     {
         //
+        $usua = User::find($id);
+        $usua->name = $requ->input('name');
+        $usua->tipo = $requ->input('tipo');
+        $usua->password = $requ->input('password');
+        $usua->estado = $requ->input('estado');
+
+        $usua->save();
+        return redirect()->action([UsersController::class, 'index']);
     }
 
     /**
@@ -80,5 +103,9 @@ class UsersController extends Controller
     public function destroy($id)
     {
         //
+        $usua = User::find($id);
+        $usua->estado = 'Inactivo';
+        $usua->save();
+        return redirect()->action([UsersController::class, 'index']);
     }
 }

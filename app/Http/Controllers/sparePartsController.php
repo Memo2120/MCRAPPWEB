@@ -15,7 +15,8 @@ class sparePartsController extends Controller
     public function index()
     {
         //
-        return view('privado/refacciones/index')->with('refacciones', sparePart::whereNotIn('estado', ['Inactivo'])->get());
+        return view('privado/refacciones/index')
+        ->with('refacciones', sparePart::whereNotIn('estado', ['Inactivo'])->get());
     }
 
     /**
