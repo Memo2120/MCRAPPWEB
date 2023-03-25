@@ -18,6 +18,7 @@
             <a href="#faqs" class="nav-item nav-link">¿Por qué?</a>
             <a href="#testimonial" class="nav-item nav-link">Testimonios</a>
             <a href="{{route('solicitudes')}}" class="nav-item nav-link">Sacar Cita</a>
+            <a href="{{asset('sesion')}}" class="nav-item nav-link">Iniciar sesion</a>
         </div>
     </div>
 </nav>
