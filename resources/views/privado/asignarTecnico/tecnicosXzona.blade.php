@@ -31,7 +31,14 @@
                         @if($tipoTicket == "SoliTicket")
                             <button class="btnmodificar"><a href="{{asset('asigTecnicoSoliTicket/'.$ticket->id.'/'.$tecnico->id)}}">Seleccionar</a></button>                            
                         @elseif($tipoTicket == "Ticket")
-                            <button class="btnmodificar"><a href="{{asset('asigTecnicoTicket/'.$ticket->id.'/'.$tecnico->id)}}">Seleccionar</a></button>
+                            <button class="btnmodificar"><a href="{{asset('asigTecnicoTicket/'.$ticket->id.'/'.$tecnico->id)}}">
+                                @if(isset($ticket->tecnicoAsignado))
+                                    Cambiar
+                                @else
+                                    Seleccionar
+                                @endif
+                            </a></button>
+                            
                         @endif
                     </td>
                 </tr>

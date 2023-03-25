@@ -57,10 +57,10 @@ class top5Controller extends Controller{
         $tecnicos = $this->topFiveTecnicos();
         $tickets = $this->topFiveTickets();
 
-        return view('privado/CRUDS/index')->with('users',$users)
-                                          ->with('SoliTickets',$sT)
-                                          ->with('refacciones',$refa)
-                                          ->with('tecnicos',$tecnicos)
-                                          ->with('tickets',$tickets);
+        return view('privado/CRUDS/index')->with('usersTop',$users)
+                                          ->with('SoliTicketsTop',$sT)
+                                          ->with('refaccionesTop',$refa)
+                                          ->with('tecnicosTop',$tecnicos)
+                                          ->with('ticketsTop',$tickets);
     }
 }

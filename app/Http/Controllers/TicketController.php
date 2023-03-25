@@ -20,7 +20,7 @@ class TicketController extends Controller
     {
         //
         return view('privado/tickets/index')->with('NoSoliTickets', ticket::whereNotIn('estado', ['Inactivo'])->get())
-                                             ->with('SolicitudTickets', solicitud_ticket::whereNotIn('estado', ['Inactivo'])->get());
+                                             ->with('SolicitudTickets', solicitud_ticket::whereNotIn('estado', ['Aceptada', 'Inactivo'])->get());
     }
 
 
@@ -29,9 +29,32 @@ class TicketController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+        $ticket = new ticket();
+        $ticket->titulo = $request->input('titulo');
+        $ticket->descripcion = $request->input('descripcion');
+        $ticket->direccion = $request->input('direccion');
+        $ticket->zona = $request->input('zona');
+        $ticket->estado = 'Activo';
+
+        if($request->input('correo')){
+            $ticket->correo = $request->input('correo');
+        }
+        if($request->input('telefono')){
+            $ticket->telefono = $request->input('telefono');
+        }
+        if($request->input('tecnicoAsignado')){
+            $ticket->tecnicoAsignado = $request->input('tecnicoAsignado');
+        }
+        if($request->input('id_solicitudTicket')){
+            $ticket->id_solicitudTicket = $request->input('id_solicitudTicket');
+        }
+
+        $ticket->save();
+
+        return redirect()->action([TicketController::class, 'index']);
     }
 
     /**
@@ -43,6 +66,7 @@ class TicketController extends Controller
     public function store(Request $request)
     {
         //
+        
     }
 
     /**
@@ -114,6 +138,7 @@ class TicketController extends Controller
         $ticket->zona = $request->input('zona');
         $ticket->estado = $request->input('estado');
         $ticket->correo = $request->input('correo');
+        $ticket->telefono = $request->input('telefono');
         $ticket->save();
 
         return redirect()->action([TicketController::class, 'index']);

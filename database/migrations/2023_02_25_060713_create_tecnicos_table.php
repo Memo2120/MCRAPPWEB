@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('apellido');
             $table->string('puesto');
             $table->string('domicilio')->nullable();
-            $table->binary('foto')->nullable();
+            $table->string('foto')->nullable();
             $table->string('zona')->nullable();
             $table->string('estado');
             $table->foreignId('id_usuario');

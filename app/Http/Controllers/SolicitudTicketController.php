@@ -36,12 +36,12 @@ class SolicitudTicketController extends Controller
         $sT->direccion = $request->input('direccion');
         $sT->zona = $request->input('zona');
         $sT->estado = 'Activo';
-        $sT->correo = $request->input('email');
         $sT->telefono = $request->input('telefono');
+        $sT->correo = $request->input('correo');
 
         $sT->save();
 
-        return view('inicio/index')->with('exito', 'Se ha registrado su solicitud, revise su correo para la confirmacion');
+        return redirect()->action([TicketController::class, 'index']);
     }
 
     /**
@@ -125,6 +125,8 @@ class SolicitudTicketController extends Controller
         $ticket->direccion = $request->input('direccion');
         $ticket->zona = $request->input('zona');
         $ticket->estado = $request->input('estado');
+        $ticket->correo = $request->input('correo');
+        $ticket->telefono = $request->input('telefono');
         $ticket->save();
 
         return redirect()->action([TicketController::class, 'index']);

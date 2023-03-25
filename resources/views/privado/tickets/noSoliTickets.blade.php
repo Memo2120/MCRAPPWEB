@@ -1,7 +1,7 @@
 @if (count($NoSoliTickets) != 0)
 <br>
 <div class="div2">
-    <h1>Tickets</h1>
+    <h1><strong>Tickets</strong></h1>
     <div class=" flex-1">
     </div>
     {{-- <div class=""> --}}
@@ -38,9 +38,14 @@
                     {{-- <td class="border px-1 py-1">{{$ticket->updated_at}}</td> --}}
                     <td href="" class="tdbtnbor">
                         <button class="btnborrar"><a href="{{asset('/eraseTicket/'.$ticket->id)}}">Borrar</a></button>
-                        <?php $urlS = strval(asset('/modificarTicket/'.$ticket->id)); $urlAction = asset('/updateTicket/'.$ticket->id);?>
-                        <button class="btnmodificar" onclick="obtenerDatos('{{$urlS}}', '{{$urlAction}}');">Modificar</button>
-                        <button class="btnas"><a href="{{asset('/asigTech/'.$ticket->id)}}">Asignar Tecnico</a></button>
+                        <button class="btnmodificar" onclick="obtenerDatos('{{asset('/modificarTicket/'.$ticket->id)}}', '{{asset('/updateTicket/'.$ticket->id)}}');">Modificar</button>
+                        <button class="btnas"><a href="{{asset('/asigTech/'.$ticket->id)}}">
+                            @if (isset($ticket->tecnicoAsignado))
+                                Cambiar Tecnico
+                            @else
+                                Asignar tecnico
+                            @endif
+                        </a></button>
                     </td>
                 </tr>
             </tbody>

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('direccion');
             $table->string('zona');
             $table->string('estado');//el truco aqui va a ser que el estado sea aceptado o declinado
-            $table->string('correo');
+            $table->string('correo')->nullable();
             $table->string('telefono');
             $table->timestamps();
         });

@@ -12,18 +12,56 @@
                 if (this.readyState == 4 && this.status == 200) {
                     try {
                         var datos = JSON.parse(this.responseText);
-                        console.log(datos);
-                        document.getElementById("titulo").value = datos.titulo;
-                        document.getElementById("descripcion").value = datos.descripcion;
-                        document.getElementById("direccion").value = datos.direccion;
-                        document.getElementById("zona").value = datos.zona;
-                        document.getElementById("estado").value = datos.estado;
-                        document.getElementById("correo").value = datos.correo;
-                        
-                        document.getElementById("formModificar").action = urlAction;
-                        
 
-                        on("1");
+                        if(datos.type == "soliTicket"){
+                            let form = document.forms['formSoliTickets'];
+                            console.log(datos);
+                            form.elements["descripcion"].value = datos.descripcion;
+                            form.elements["direccion"].value = datos.direccion;
+                            form.elements["zona"].value = datos.zona;
+                            form.querySelector('input[name="estado').value = datos.estado;
+                            form.querySelector('select[name="estado').value = datos.estado;
+                            // form.querySelector('#estado2').value = datos.estado;
+                            form.elements["titulo"].value = datos.titulo;
+
+                            // if(datos.correo){
+                                form.elements["correo"].value = datos.correo;
+                            // }
+                            // if(datos.telefono){
+                                form.elements["telefono"].value = datos.telefono;
+                            // }
+                            
+                            document.getElementById("formSoliTickets").action = urlAction;
+    
+                            on("2");
+                        }else{
+                            let form = document.forms['formTickets'];
+                            console.log(datos);
+                            form.elements["descripcion"].value = datos.descripcion;
+                            form.elements["direccion"].value = datos.direccion;
+                            form.elements["zona"].value = datos.zona;
+                            form.querySelector('input[name="estado"]').value = datos.estado;
+                            form.querySelector('select[name="estado').value = datos.estado;
+                            form.elements["tecnico-Asig"].value = datos.tecnicoAsignado;
+                            form.elements["id_soliTicket"].value = datos.id_solicitudTicket;
+
+                            // form.querySelector('#estado2').value = datos.estado;
+
+                            // form.elements["estado"].value = datos.estado;
+                            form.elements["titulo"].value = datos.titulo;
+
+                            // if(datos.correo){
+                                form.elements["correo"].value = datos.correo;
+                            // }
+                            // if(datos.telefono){
+                                form.elements["telefono"].value = datos.telefono;
+                            // }
+                            
+                            document.getElementById("formTickets").action = urlAction;
+    
+                            on("5");
+                        }
+
                     } catch (error) {
                         console.log(error);
                     }
@@ -45,5 +83,7 @@
 @section('content')
     @include('privado/tickets/soliTickets')
     @include('privado/tickets/noSoliTickets')
-    @include('privado/tickets/layoutModificar')
+    @include('privado/CRUDS/ticketsCRUD')
+    @include('privado/CRUDS/soliTicketsCRUD')
+    {{-- @include('privado/tickets/layoutModificar') --}}
 @endsection

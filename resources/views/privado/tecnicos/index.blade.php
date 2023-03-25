@@ -20,6 +20,7 @@
                         document.getElementById("domicilio").value = datos.domicilio;
                         document.getElementById("zona").value = datos.zona;
                         document.getElementById("estado").value = datos.estado;
+                        document.getElementById("user_id").value = datos.id_usuario;
 
                         document.getElementById("formTecnicos").action = urlAction;
 

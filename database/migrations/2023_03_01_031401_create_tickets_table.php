@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('direccion');
             $table->string('zona');
             $table->string('estado');//activo, en proceso o inactivo
-            $table->string('correo');
-            $table->string('telefono');
+            $table->string('correo')->nullable();
+            $table->string('telefono')->nullable();
             $table->foreignId('tecnicoAsignado')->nullable();//puede ser nulo ya que el tecnico aun no puede estar asignado
             $table->foreign('tecnicoAsignado')->references('id')->on('tecnicos');
             $table->foreignId('id_solicitudTicket')->nullable();//puede ser nula ya que no todo ticket ingresado vendra de un cliente

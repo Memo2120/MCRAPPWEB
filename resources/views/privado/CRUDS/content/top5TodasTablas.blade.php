@@ -7,7 +7,7 @@
             <tr>
                 <th class="m1">Refacciones</th>
             </tr>
-            @foreach ($refacciones as $refaccion)
+            @foreach ($refaccionesTop as $refaccion)
                 <tr>
                     <td>{{$refaccion->nombre}}</td>
                 </tr>
@@ -20,7 +20,7 @@
                 <tr>
                     <th class="m1">Solicitud de Tickets</th>
                 </tr>
-                @foreach ($SoliTickets as $soliTicket)
+                @foreach ($SoliTicketsTop as $soliTicket)
                     <tr>
                         <td>{{$soliTicket->titulo}}</td>
                     </tr>
@@ -33,7 +33,7 @@
                 <tr>
                     <th class="m1">Usuarios</th>
                 </tr>
-                @foreach ($users as $user)
+                @foreach ($usersTop as $user)
                     <tr>
                         <td>{{$user->name}}</td>
                     </tr>
@@ -47,7 +47,7 @@
                 <tr>
                     <th class="m1">Tecnicos</th>
                 </tr>
-                @foreach ($tecnicos as $tecnico)
+                @foreach ($tecnicosTop as $tecnico)
                     <tr>
                         <td>{{$tecnico->nombre}}</td>
                     </tr>
@@ -60,7 +60,7 @@
                 <tr>
                     <th class="m1">Tickets</th>
                 </tr>
-                @foreach ($tickets as $ticket)
+                @foreach ($ticketsTop as $ticket)
                     <tr>
                         <td>{{$ticket->titulo}}</td>
                     </tr>

@@ -6,13 +6,18 @@
                 <p>Usuarios</p>
             </div>
             <div class="campos">
-                <form id="formUsuarios" action="" method="POST" enctype="multipart/form-data">
+                <form id="formUsuarios" action="{{asset('/crUsuario')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <label for="name">Nombre</label><br>
                     <input id="name" type="text" value="" name="name">
                     <br><br>
                     <label for="tipo">Tipo</label><br>
-                    <input id="tipo" type="text" value="" name="tipo">
+                    <div style="width: 100%; height:100% " class="todos">
+                        <select style="width: 75%; height:75%" name="tipo" id="tipo" >
+                            <option value="Empleado">Empleado</option>
+                            <option value="Master">Master</option>
+                        </select>
+                    </div>
                     <br><br>
                     <label for="password">Contraseña</label><br>
                     <input id="password" type="password" value="" name="password">

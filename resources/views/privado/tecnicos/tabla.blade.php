@@ -29,7 +29,7 @@
                     <td class="tdcrdteccant">{{$tecnico->apellido}}</td>
                     <td class="tdcrdtecdes"><p class="pdes1">{{$tecnico->puesto}}</p></td>
                     <td class="tdcrdtecnom"><p class="pdes1">{{$tecnico->domicilio}}</p></td>
-                    <td class="tdcrdtecimg"><img src="{{asset('img/tecnicos/'.$tecnico->imagenes)}}" alt="" width="60px" height="60px"></td>
+                    <td class="tdcrdtecimg"><img src="{{asset('img/tecnicos/'.$tecnico->foto)}}" alt="" width="60px" height="60px"></td>
                     <td class="tdcrdtecest"><p class="pdes1">{{$tecnico->zona}}</p></td>
                     <td class="tdcrdteccod"><p class="pdes1">{{$tecnico->estado}}</p></td>
                     <td class="tdcrdteccreat"><p class="pdes1">{{$tecnico->created_at}}</p></td>

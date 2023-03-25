@@ -36,15 +36,16 @@ Route::post('/registrarSolicitud', [SolicitudTicketController::class, 'create'])
 Route::get('/solicitudesAct', [SolicitudTicketController::class, 'show']);
 
 Route::get('/ticketsNoAsignados', [TicketController::class, 'index']);
+Route::post('/crTicket', [TicketController::class, 'create']);
 Route::get('/asigTech/{ticket}', [TicketController::class, 'show']);
 Route::get('/modificarTicket/{id_ticket}', [TicketController::class, 'modificar']);
 Route::post('/updateTicket/{id}', [TicketController::class, 'update']);
 Route::get('/eraseTicket/{id}', [TicketController::class, 'destroy']);
 Route::get('/asigTecnicoTicket/{ticket_id}/{tecnico_id}', [TicketController::class, 'asigTecnico']);
 
-
 Route::get('/asigTechSoli/{ticket}', [SolicitudTicketController::class, 'show']);
 Route::get('/modificarSoliTicket/{id_soliTicket}', [SolicitudTicketController::class, 'modificar']);
+Route::post('/crSoliTicket', [SolicitudTicketController::class, 'create']);
 Route::post('/updateSoliTicket/{id_soli}', [SolicitudTicketController::class, 'update']);
 Route::get('/eraseSoliTicket/{id}', [SolicitudTicketController::class, 'destroy']);
 Route::get('/asigTecnicoSoliTicket/{solicitud_id}/{tecnico_id}', [SolicitudTicketController::class, 'asigTecnico']);

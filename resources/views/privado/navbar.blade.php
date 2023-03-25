@@ -10,9 +10,9 @@
     <li>
       <a href="{{asset('ticketsNoAsignados')}}">
         <i class='bx bx-grid-alt'></i>
-        <span class="links_name">Tickets Sin asignar</span>
+        <span class="links_name">Tickets y solicitudes</span>
       </a>
-      <span class="tooltip">Tickets Sin asignar</span>
+      <span class="tooltip">Tickets y solicitudes</span>
     </li>
 
     <li>

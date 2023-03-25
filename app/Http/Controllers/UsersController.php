@@ -16,8 +16,7 @@ class UsersController extends Controller
     public function index()
     {
         //
-        return view('privado/usuarios/index')
-        ->with('usuarios', User::whereNotIn('estado', ['Inactivo'])->get());
+        return view('privado/usuarios/index')->with('usuarios', User::whereNotIn('estado', ['Inactivo'])->get());
     }
 
     /**

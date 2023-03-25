@@ -33,7 +33,7 @@ class tecnicosController extends Controller
         $tecnico->puesto = $req->input('puesto');
         $tecnico->domicilio = $req->input('domicilio');
 
-        if($foto_tecnico = $req->file('imagen')){
+        if($foto_tecnico = $req->file('foto')){
             $destino = 'img/tecnicos';
             $origen = $foto_tecnico->getClientOriginalName();
             $foto_tecnico->move($destino, $origen); 
@@ -44,6 +44,7 @@ class tecnicosController extends Controller
 
         $tecnico->zona = $req->input('zona');
         $tecnico->estado = 'Activo';
+        $tecnico->id_usuario= $req->input('user_id');
         // $tecnico->nombre = $req->input('name');
         $tecnico->save();
 
@@ -101,7 +102,7 @@ class tecnicosController extends Controller
         $tecnico->puesto = $request->input('puesto');
         $tecnico->domicilio = $request->input('domicilio');
 
-        if($foto_tecnico = $request->file('imagen')){
+        if($foto_tecnico = $request->file('foto')){
             $destino = 'img/tecnicos';
             $origen = $foto_tecnico->getClientOriginalName();
             $foto_tecnico->move($destino, $origen); 
