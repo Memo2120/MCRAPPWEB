@@ -18,6 +18,7 @@
                         document.getElementById("direccion").value = datos.direccion;
                         document.getElementById("zona").value = datos.zona;
                         document.getElementById("estado").value = datos.estado;
+                        document.getElementById("correo").value = datos.correo;
                         
                         document.getElementById("formModificar").action = urlAction;
                         

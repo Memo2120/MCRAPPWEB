@@ -38,6 +38,10 @@
                     </div>
                     <br>
                     <br>
+                    <label for="correo">Correo</label><br>
+                    <input class="cantidadin" type="text" value="" name="correo" id="correo">
+                    <br>
+                    <br>
                     <div class="btn-crear">
                         <button type="submit" >Modificar</button>
                     </div>
