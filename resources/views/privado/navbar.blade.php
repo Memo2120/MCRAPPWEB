@@ -24,16 +24,16 @@
     </li>
 
     {{-- SECCION DE LOS CRUD'S--}}
-    <li>
-      <a href="{{asset('')}}">
+    {{-- <li>
+      <a href="{{asset('/showTickets')}}">
         <i class='bx bx-align-justify' ></i>
         <span class="links_name">Tickets</span>
       </a>
       <span class="tooltip">Tickets</span>
-    </li>
+    </li> --}}
 
     <li>
-      <a href="{{asset('')}}">
+      <a href="{{asset('/showUsuarios')}}">
         <i class='bx bx-user' ></i>
         <span class="links_name">Usuarios</span>
       </a>
@@ -41,7 +41,7 @@
     </li>
 
     <li>
-      <a href="{{asset('')}}">
+      <a href="{{asset('/showTecnicos')}}">
         <i class='bx bx-wrench' ></i>
         <span class="links_name">Tecnicos</span>
       </a>
@@ -49,20 +49,20 @@
     </li>
 
     <li>
-      <a href="{{asset('showSpareParts')}}">
+      <a href="{{asset('/showSpareParts')}}">
         <i class='bx bx-cog' ></i>
         <span class="links_name">Refacciones</span>
       </a>
       <span class="tooltip">Refacciones</span>
     </li>
 
-    <li>
-      <a href="{{asset('')}}">
+    {{-- <li>
+      <a href="{{asset('/asigTechSoli/{ticket}')}}">
         <i class='bx bx-bookmark-alt-plus' ></i>
         <span class="links_name">Solicitudes</span>
       </a>
       <span class="tooltip">Solicitudes</span>
-    </li>
+    </li> --}}
 
 
     {{--TERMINO DE SECCION DE LOS CRUD'S--}}

@@ -19,9 +19,10 @@ class TicketController extends Controller
     public function index()
     {
         //
-        return view('privado/tickets/index')->with('NoSoliTickets', ticket::where('estado', 'Activo')->get())
-                                             ->with('SolicitudTickets', solicitud_ticket::where('estado', 'Activo')->get());
+        return view('privado/tickets/index')->with('NoSoliTickets', ticket::whereNotIn('estado', ['Inactivo'])->get())
+                                             ->with('SolicitudTickets', solicitud_ticket::whereNotIn('estado', ['Inactivo'])->get());
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -112,6 +113,7 @@ class TicketController extends Controller
         $ticket->direccion = $request->input('direccion');
         $ticket->zona = $request->input('zona');
         $ticket->estado = $request->input('estado');
+        $ticket->correo = $request->input('correo');
         $ticket->save();
 
         return redirect()->action([TicketController::class, 'index']);
