@@ -18,7 +18,7 @@ class LoginController extends Controller
         $user = new User();
 
         $user ->name = $request->name;
-        $user ->email = $request->email;
+        // $user ->email = $request->email;
         $user ->password = Hash::make($request->password) ;
 
         $user->save();
@@ -31,6 +31,19 @@ class LoginController extends Controller
 
     public function login(Request $request){
         //Validar datos
+
+        $credentials = [
+            "name" => $request->nombre,
+            "password" => $request->password
+        ];
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()->intended(route('btoones'));
+        }else {
+            return redirect()->route('inicio');
+        }
     }
 
     public function logout(Request $request){
