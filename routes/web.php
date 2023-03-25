@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SolicitudTicketController;
 use App\Http\Controllers\sparePartsController;
 use App\Http\Controllers\TicketController;
@@ -26,8 +27,9 @@ Route::get('/', function () {
 Route::view('/registrarticket','RegistrarTicket/index')->name('registrar');
 Route::view('/inicio','inicio/index')->name('inicio');
 Route::view('/solicitudes','formulario/index')->name('solicitudes');
-
-Route::view('/sesion', 'sesion/index');
+//'sesion/index',
+Route::post('/sesion', [LoginController::class, 'login'])->name('login');
+Route::view('/pruebalogin','sesion/index');
 Route::view('/solicitud', 'crudSolicitudTicket/index');
 Route::view('/solicitarTicket', 'crudSolicitudTicket/index');
 
@@ -71,8 +73,9 @@ Route::get('/removeTecnicos/{id}',[tecnicosController::class,'destroy']);
 Route::view('/crudrefacciones','privado/refacciones/index');
 
 // Route::view('btoones', 'privado/CRUDS/index');
-Route::get('btoones', [top5Controller::class, 'allTop5']);
+Route::get('btoones', [top5Controller::class, 'allTop5'])->middleware('auth')->name('btoones');
 
+//Route::post('/inicia-sesion',[LoginController::class, 'login'])->name('inicia-sesion');
 
 
 
