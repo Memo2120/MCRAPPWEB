@@ -31,6 +31,8 @@ class sparePartsController extends Controller
         $refa->nombre = $req->input('name');
         $refa->cantidad = $req->input('cantidad');
         $refa->descripcion = $req->input('descripcion');
+        $refa->tipoRefaccion = $req->input('tipoRefaccion');
+
 
         if($foto_refaccion = $req->file('imagen')){
             $destino = 'img/refacciones';
@@ -98,6 +100,7 @@ class sparePartsController extends Controller
         $refa->nombre = $req->input('name');
         $refa->cantidad = $req->input('cantidad');
         $refa->descripcion = $req->input('descripcion');
+        $refa->tipoRefaccion = $req->input('tipoRefaccion');
 
         if($foto_refaccion = $req->file('imagen')){
             $destino = 'img/refacciones';
