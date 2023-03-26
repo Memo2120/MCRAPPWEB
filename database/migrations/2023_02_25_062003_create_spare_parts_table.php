@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->char('cantidad');
+            $table->string('tipoRefaccion');
             $table->text('descripcion')->nullable();
             $table->string('imagenes')->nullable();
             $table->string('estado');
