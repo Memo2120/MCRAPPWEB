@@ -71,10 +71,11 @@
       <div class="profile-details">
         <img src="{{asset('img/yo.jpg')}}" alt="profileImg">
         <div class="name_job">
-          <div class="name">Usuario</div>
-          <div class="job">Cerrar Sesión</div>
+          <div class="name"> @auth  {{Auth::user()->name}} @endauth </div>
+          <div class="job"><a style="color: white" href="{{asset('/logout')}}">Cerrar Sesión</a></div>
         </div>
       </div>
+      
       <i class='bx bx-log-out' id="log_out" ><a href=""></a></i>
     </li>
   </ul>

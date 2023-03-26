@@ -77,12 +77,20 @@ class LoginController extends Controller
             $name = $request->name;
             $password = $request->password;
         if (Auth::attempt(['name' => $name, 'password' => $password, 'estado' => 'Activo', 'tipo' => 'Master'])) {
+            
             $request->session()->regenerate();
- 
+            session_start();
             return redirect()->intended('/btoones');
         }else{
                 return redirect()->route('inicio');
-            }
+        }
+
+        if (Auth::attempt(['name' => $name, 'password' => $password, 'estado' => 'Activo'])) {
+            
+            $request->session()->regenerate();
+            session_start();
+            return redirect()->intended('/inicio');
+        }
  
         return back()->withErrors([
             'name' => 'The provided credentials do not match our records.',
@@ -115,6 +123,6 @@ class LoginController extends Controller
                          $request->session()->invalidate();
                          $request->session()->regenerateToken();
                 
-                         return redirect(route('/pruebalogin'));
+                         return redirect(asset('/pruebalogin'));
                      }
 }
