@@ -69,39 +69,52 @@
                 <div class="col-lg-4 mb-3">
                     <div class="product-item mb-2">
                         <div class="product-img">
-                            <img class="img-fluid" src="{{asset('img/lav.png')}}" alt="">
+                            <img class="img-fluid" src="{{asset('img/lavadora.png')}}" alt="">
                             <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                 <i class="fa fa-2x fa-plus text-white"></i>
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
-                            <h3 class="m-0">Lavadoras</h3>
+                            <h3 class="m-0">Reparación de Lavadoras</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3">
                     <div class="product-item mb-2">
                         <div class="product-img">
-                            <img class="img-fluid" src="{{asset('img/est.png')}}" alt="">
+                            <img class="img-fluid" src="{{asset('img/secadora.png')}}" alt="">
                             <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                 <i class="fa fa-2x fa-plus text-white"></i>
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
-                            <h3 class="m-0">Estufas</h3>
+                            <h3 class="m-0">Reparación de Secadoras</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3">
                     <div class="product-item mb-2">
                         <div class="product-img">
-                            <img class="img-fluid" src="{{asset('img/ref.png')}}" alt="">
+                            <img class="img-fluid" src="{{asset('img/refri.png')}}" alt="">
                             <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                 <i class="fa fa-2x fa-plus text-white"></i>
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
-                            <h3 class="m-0">Refrigeradores</h3>
+                            <h3 class="m-0">Reparación de Refrigeradores</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="product-item mb-2">
+                        <div class="product-img">
+                            <img class="img-fluid" src="{{asset('img/estufa.png')}}" alt="">
+                            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                <i class="fa fa-2x fa-plus text-white"></i>
+                            </a>
+                        </div>
+                        <div class="bg-secondary text-center p-4">
+                            <h3 class="m-0">Reparación de Estufas</h3>
                         </div>
                     </div>
                 </div>

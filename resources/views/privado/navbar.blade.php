@@ -69,7 +69,7 @@
     
     <li class="profile">
       <div class="profile-details">
-        <img src="{{asset('img/yo.jpg')}}" alt="profileImg">
+        <img src="{{asset('img/alan.jpg')}}" alt="profileImg">
         <div class="name_job">
           <div class="name">Usuario</div>
           <div class="job">Cerrar Sesión</div>
