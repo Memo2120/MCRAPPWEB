@@ -73,8 +73,8 @@ Route::get('/removeTecnicos/{id}',[tecnicosController::class,'destroy']);
 Route::view('/crudrefacciones','privado/refacciones/index');
 
 // Route::view('btoones', 'privado/CRUDS/index');
-Route::get('btoones', [top5Controller::class, 'allTop5'])->middleware('auth')->name('btoones');
-
+Route::get('btoones', [top5Controller::class, 'allTop5']);
+//->middleware('auth')->name('btoones')
 //Route::post('/inicia-sesion',[LoginController::class, 'login'])->name('inicia-sesion');
 
 

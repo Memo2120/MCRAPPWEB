@@ -16,7 +16,7 @@
                             <div class="form-row">
                                 
                                 <div class="col-sm-12 control-group">
-                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" id="email" name="email" placeholder="ingresa tu correo" required="required" data-validation-required-message="Por favor introduce correo" />
+                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" id="correo" name="correo" placeholder="ingresa tu correo" required="required" data-validation-required-message="Por favor introduce correo" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
