@@ -18,7 +18,7 @@
                         document.getElementById("name").value = datos.name;
                         document.getElementById("tipo").value = datos.tipo;
                         document.getElementById("estado").value = datos.estado;
-                        document.getElementById("password").value = datos.password;
+                        // document.getElementById("password").value = datos.password;
                         document.getElementById("formUsuarios").action = urlAction;
 
                         on("3");

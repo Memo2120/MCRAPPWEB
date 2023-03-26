@@ -19,9 +19,9 @@
                         </select>
                     </div>
                     <br><br>
-                    <label for="password">Contraseña</label><br>
+                    {{-- <label for="password">Contraseña</label><br>
                     <input id="password" type="password" value="" name="password">
-                    <br><br>
+                    <br><br> --}}
 
                     @if (isset($usuarios))
                     <label for="estado">Estado</label><br>

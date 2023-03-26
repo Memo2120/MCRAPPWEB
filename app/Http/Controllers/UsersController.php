@@ -30,7 +30,7 @@ class UsersController extends Controller
         $usua = new User();
         $usua->name = $requ->input('name');
         $usua->tipo = $requ->input('tipo');
-        $usua->password = $requ->input('password');
+        $usua->password = \Hash::make($requ->input('password'));
         $usua->estado = 'Activo';
 
         $usua->save();
@@ -88,7 +88,7 @@ class UsersController extends Controller
         $usua = User::find($id);
         $usua->name = $requ->input('name');
         $usua->tipo = $requ->input('tipo');
-        $usua->password = $requ->input('password');
+        // $usua->password = \Hash::make($requ->input('password'));
         $usua->estado = $requ->input('estado');
 
         $usua->save();
