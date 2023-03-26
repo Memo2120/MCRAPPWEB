@@ -70,12 +70,12 @@
                     <div class="product-item mb-2">
                         <div class="product-img">
                             <img class="img-fluid" src="{{asset('img/lav.png')}}" alt="">
-                            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                            <a href="{{route('solicitudes')}}" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                 <i class="fa fa-2x fa-plus text-white"></i>
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
-                            <h3 class="m-0">Lavadoras</h3>
+                            <a href="{{route('solicitudes')}}"><h3 class="m-0">Lavadoras</h3></a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
-                            <h3 class="m-0">Estufas</h3>
+                            <a href="{{route('solicitudes')}}"><h3 class="m-0">Estufas</h3></a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
-                            <h3 class="m-0">Refrigeradores</h3>
+                            <a href="{{route('solicitudes')}}"><h3 class="m-0">Refrigeradores</h3></a>
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,7 @@
         <table class="tabla">
 
             <thead class="">
-                <th class="thcrdrefnom">Nombre</th> 
+                <th class="thcrdusunom">Nombre</th> 
                 <th class="thcrdusutipo">Tipo</th>
                 <th class="thcrdusuest">Estado</th>
                 <th class="thcrdusupsw" hidden>Password</th>
@@ -26,7 +26,7 @@
                     <td class="tdcrdusunom"><p class="pdes1">{{$usuario->name}}</p></td>
                     <td class="tdcrdusutipo"><p class="pdes1">{{$usuario->tipo}}</p></td>
                     <td class="tdcrdusuest"><p class="pdes1">{{$usuario->estado}}</p></td>
-                    <td class="tdcrdusupsw" ><p class="pdes1">{{$usuario->password}}</p></td>
+                    <td class="tdcrdusupsw" hidden><p class="pdes1">{{$usuario->password}}</p></td>
                     <td class="tdcrdusucreat"><p class="pdes1">{{$usuario->created_at}}</p></td>
                     <td class="tdcrdusuact"><p class="pdes1">{{$usuario->updated_at}}</p></td>
                     <td href="" class="tdbtnbor">

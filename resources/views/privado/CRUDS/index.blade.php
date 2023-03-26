@@ -1,3 +1,4 @@
+@if (@auth()->user()->tipo=='Master')
 @extends('privado/master')
 
 @section('css')
@@ -32,3 +33,7 @@
     @include('privado/CRUDS/ticketsCRUD')
 
 @endsection
+@else
+    <h1 style="padding-left: 170px">Usted no es usuario permitido</h1>
+
+@endif
