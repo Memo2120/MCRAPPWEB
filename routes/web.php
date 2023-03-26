@@ -28,7 +28,9 @@ Route::view('/registrarticket','RegistrarTicket/index')->name('registrar');
 Route::view('/inicio','inicio/index')->name('inicio');
 Route::view('/solicitudes','formulario/index')->name('solicitudes');
 //'sesion/index',
-Route::post('/sesion', [LoginController::class, 'login'])->name('login');
+Route::get('/sesion', [LoginController::class, 'authenticate']);
+Route::post('/sesion2', [LoginController::class, 'register']);
+Route::post('/logout', [LoginController::class, 'logout']);
 Route::view('/pruebalogin','sesion/index');
 Route::view('/solicitud', 'crudSolicitudTicket/index');
 Route::view('/solicitarTicket', 'crudSolicitudTicket/index');

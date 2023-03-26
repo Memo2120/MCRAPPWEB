@@ -18,7 +18,16 @@
             <a href="#faqs" class="nav-item nav-link">¿Por qué?</a>
             <a href="#testimonial" class="nav-item nav-link">Testimonios</a>
             <a href="{{route('solicitudes')}}" class="nav-item nav-link">Sacar Cita</a>
-            <a href="{{asset('sesion')}}" class="nav-item nav-link">Iniciar sesion</a>
+            <a href="{{asset('pruebalogin')}}" class="nav-item nav-link">Iniciar sesion</a>
         </div>
+
+
+        @if ()
+            <div class="sesion">
+                <h1>{{ auth()->user()->name }}</h1>
+            <a href="{{asset('logout')}}" class="nav-item nav-link">Cerrar Sesion</a>
+            </div>
+        @endif
+        
     </div>
 </nav>

@@ -17,20 +17,20 @@
         <!--Formulario de Login y registro-->
         <div class="contenedor__login-register">
             <!--Login-->
-            <form action="" class="formulario__login">
+            <form action="{{asset('/sesion')}}" class="formulario__login">
+                
                 <h2>Iniciar Sesión</h2>
-                <input type="text" placeholder="Correo Electronico">
-                <input type="password" placeholder="Contraseña">
+                <input type="text" id="name" name="name" placeholder="Correo Electronico">
+                <input type="password" id="password" name="password" placeholder="Contraseña">
                 <button>Entrar</button>
             </form>
 
             <!--Register-->
-            <form action="" class="formulario__register">
+            <form action="{{asset('sesion2')}}" class="formulario__register" method="POST">
+                @csrf
                 <h2>Regístrarse</h2>
-                <input type="text" placeholder="Nombre completo">
-                <input type="text" placeholder="Correo Electronico">
-                <input type="text" placeholder="Usuario">
-                <input type="password" placeholder="Contraseña">
+                <input type="text" id="name" name="name" placeholder="Usuario">
+                <input type="password" id="password" name="password" placeholder="Contraseña">
                 <button>Regístrarse</button>
             </form>
         </div>
