@@ -30,8 +30,8 @@ Route::view('/solicitudes','formulario/index')->name('solicitudes');
 //'sesion/index',
 Route::get('/sesion', [LoginController::class, 'authenticate']);
 Route::post('/sesion2', [LoginController::class, 'register']);
-Route::post('/logout', [LoginController::class, 'logout']);
-Route::view('/pruebalogin','sesion/index');
+Route::get('/logout', [LoginController::class, 'logout']);
+Route::view('/pruebalogin','sesion/index')->name('login');
 Route::view('/solicitud', 'crudSolicitudTicket/index');
 Route::view('/solicitarTicket', 'crudSolicitudTicket/index');
 
@@ -75,7 +75,7 @@ Route::get('/removeTecnicos/{id}',[tecnicosController::class,'destroy']);
 Route::view('/crudrefacciones','privado/refacciones/index');
 
 // Route::view('btoones', 'privado/CRUDS/index');
-Route::get('btoones', [top5Controller::class, 'allTop5']);
+Route::get('btoones', [top5Controller::class, 'allTop5'])->middleware('auth')->name('btoones');
 //->middleware('auth')->name('btoones')
 //Route::post('/inicia-sesion',[LoginController::class, 'login'])->name('inicia-sesion');
 

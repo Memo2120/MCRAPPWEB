@@ -1,5 +1,5 @@
 
-<h1>Ultimos registros</h1>
+<h1 style="width: 1300px; text-align:center;">Ultimos registros</h1>
 <br>
 <div class="row">
         <div class="column">

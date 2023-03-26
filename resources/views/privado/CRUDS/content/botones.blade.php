@@ -1,4 +1,4 @@
-<h1 style="font-size: 45px;">Menu Principal</h1>
+<h1 style="font-size: 45px; width:1300px; text-align:center;">Menu Principal</h1>
 <br><br>
 <div class="div_scroll">
 
