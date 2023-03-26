@@ -24,6 +24,16 @@
                     <input class="codigoin" type="text" value="" name="codigo" id="codigo">
                     <br>
                     <br>
+                    <label for="tipoRefaccion">Tipo de refaccion</label><br>
+                    <div style="width: 100%; height:100% " class="todos">
+                        <select style="width: 75%; height:75%" name="tipoRefaccion" id="tipoRefaccion" >
+                            <option value="Lavadora">Lavadora</option>
+                            <option value="Estufa">Estufa</option>
+                            <option value="Refrigerador">Refrigerador</option>
+                            <option value="Secadora">Secadora</option>
+                        </select>
+                    </div>
+                    <br><br>
                     @if (isset($refacciones))
                     <label for="estado">Estado</label><br>
                     <div style="width: 100%; height:100% " class="todos">

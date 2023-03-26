@@ -20,6 +20,7 @@
                         document.getElementById("descripcion").value = datos.descripcion;
                         document.getElementById("estado").value = datos.estado;
                         document.getElementById("codigo").value = datos.codigo;
+                        document.getElementById("tipoRefaccion").value = datos.tipoRefaccion;
 
                         document.getElementById("formRefacciones").action = urlAction;
 
