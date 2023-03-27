@@ -358,7 +358,52 @@ a{
     outline: none;
 }
 
+.sesion1{
+    color: white;
+}
+
 html{
     min-height: 100%;
-    overflow-x:hidden;
+    /* overflow-x:hidden; */
 }
+
+.thcrdusunom,.thcrdusutipo,.thcrdusuest,
+.thcrdusupsw,.thcrdusucreat,.thcrdusuact{
+    width: 18%;
+}
+
+.tdcrdusupsw,.tdcrdusucreat,.tdcrdusuact{
+    width: 16.6%;
+}
+.tdcrdusunom{
+    width: 16.6%;
+    padding-left: 70px;
+}
+
+.tdcrdusutipo{
+    width: 16.6%;
+    padding-left: 30px;
+}
+.tdcrdusuest{
+    width: 16.6%;
+    padding-left: 1.6%;
+}
+
+.tabla10{
+    width: 100%;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.tabla11{
+    width: 110%;
+    border-top: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+/* .tdcrdtecest{
+    width: 10%;
+    padding-left: 80px;
+} */

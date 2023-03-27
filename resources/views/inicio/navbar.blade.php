@@ -5,8 +5,13 @@
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
         <div class="navbar-nav ml-auto py-0">
+            @if (!Auth::check())
+                <a href="{{asset('pruebalogin')}}" class="nav-item nav-link">Iniciar sesion</a>
+            @endif
+            
             <a href="{{route('inicio')}}" class="nav-item nav-link active">Inicio</a>
             <a href="#about" class="nav-item nav-link">Nosotros</a>
             <a href="#service" class="nav-item nav-link">Servicios</a>
@@ -18,17 +23,29 @@
             <a href="#faqs" class="nav-item nav-link">¿Por qué?</a>
             <a href="#testimonial" class="nav-item nav-link">Testimonios</a>
             <a href="{{route('solicitudes')}}" class="nav-item nav-link">Sacar Cita</a>
-            <a href="{{asset('pruebalogin')}}" class="nav-item nav-link">Iniciar sesion</a>
             
+            
+        
+    
+
+        @auth
+
+            @if (@auth()->user()->tipo=='Master')
+                <a href="{{asset('btoones')}}" class="nav-item nav-link">Dashboard</a>
+            @endif
+            
+
         </div>
-
-
-        {{-- @if (isset($_SESSION))
-            <div class="sesion">
-                <h1>{{ auth()->user()->$user }}</h1>
-            <a href="{{asset('logout')}}" class="nav-item nav-link">Cerrar Sesion</a>
+    </div>
+            <div class="">
+                <a style="color:white" href="">Sesion de: {{Auth::user()->name}}</a>
+                <a href="{{asset('/logout')}}"> logout </a>
+                {{-- <h5 class="sesion1"></h5>        --}}
             </div>
-        @endif --}}
+        @endauth
+
+            
+
         
     </div>
 </nav>

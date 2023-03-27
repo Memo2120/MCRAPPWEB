@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Http\Controllers\Controller;
+use App\Models\sparePart;
 use Illuminate\Http\Request;
 
-
-class UsersController extends Controller
+class imgsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,6 @@ class UsersController extends Controller
     public function index()
     {
         //
-        return view('privado/usuarios/index')->with('usuarios', User::whereNotIn('estado', ['Inactivo'])->get());
     }
 
     /**
@@ -24,19 +23,9 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $requ)
+    public function create()
     {
         //
-        $usua = new User();
-        $usua->name = $requ->input('name');
-        $usua->tipo = $requ->input('tipo');
-        $usua->password = \Hash::make($requ->input('password'));
-        $usua->estado = 'Activo';
-
-        $usua->save();
-
-        return redirect()->action([UsersController::class, 'index']);
-
     }
 
     /**
@@ -58,7 +47,14 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        // $spareP = sparePart::select('imagenes')
+        //                      ->where('estado', 'Activo')
+        //                      ->where('id', $id)
+        //                      ->get();
+        $spareP = sparePart::find($id);
+        return redirect(asset('img/refacciones/'. $spareP->imagenes));
+
     }
 
     /**
@@ -70,9 +66,7 @@ class UsersController extends Controller
     public function edit($id)
     {
         //
-        $usua = User::find($id);
-        // dd($usua);
-        return $usua;
+        
     }
 
     /**
@@ -82,17 +76,9 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $requ, $id)
+    public function update(Request $request, $id)
     {
         //
-        $usua = User::find($id);
-        $usua->name = $requ->input('name');
-        $usua->tipo = $requ->input('tipo');
-        // $usua->password = \Hash::make($requ->input('password'));
-        $usua->estado = $requ->input('estado');
-
-        $usua->save();
-        return redirect()->action([UsersController::class, 'index']);
     }
 
     /**
@@ -104,9 +90,5 @@ class UsersController extends Controller
     public function destroy($id)
     {
         //
-        $usua = User::find($id);
-        $usua->estado = 'Inactivo';
-        $usua->save();
-        return redirect()->action([UsersController::class, 'index']);
     }
 }

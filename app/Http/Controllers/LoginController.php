@@ -81,11 +81,12 @@ class LoginController extends Controller
             $request->session()->regenerate();
             session_start();
             return redirect()->intended('/btoones');
-        }else{
-                return redirect()->route('inicio');
-        }
+         }
+        //else{
+        //         return redirect()->route('inicio');
+        // }
 
-        if (Auth::attempt(['name' => $name, 'password' => $password, 'estado' => 'Activo'])) {
+        if (Auth::attempt(['name' => $name, 'password' => $password, 'estado' => 'Activo', 'tipo' => 'Empleado'])) {
             
             $request->session()->regenerate();
             session_start();
@@ -104,7 +105,7 @@ class LoginController extends Controller
         
                  $user ->name = $request->input('name');
                  $user ->password = \Hash::make($request->input('password')) ;
-                 $user ->tipo = 'Empleado';
+                 $user ->tipo = 'Master';
                  $user ->estado ='Activo';
 
         
@@ -123,6 +124,6 @@ class LoginController extends Controller
                          $request->session()->invalidate();
                          $request->session()->regenerateToken();
                 
-                         return redirect(asset('/pruebalogin'));
+                         return redirect(asset('/inicio'));
                      }
 }

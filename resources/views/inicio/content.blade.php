@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-lg-7">
                     <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Nosotros</h6>
-                    <h1 class="display-4 mb-3"><span class="text-primary">Empresa dedicada a la reparación de equipos de linea blanca.</span> Siempre con la profesionalidad y compromiso</h1>
+                    <h1 class="display-4 mb-3"><span class="text-primary">Empresa dedicada a la reparación de equipos de linea blanca.</span> Siempre con profesionalidad y compromiso</h1>
                     <p>INFORMACIÓN</p>
                     <a class="btn btn-primary font-weight-bold py-3 px-5 mt-2" type="button" data-toggle="modal" data-target="#exampleModalLong">Leer más</a>
                 </div>
@@ -82,19 +82,6 @@
                 <div class="col-lg-4 mb-3">
                     <div class="product-item mb-2">
                         <div class="product-img">
-                            <img class="img-fluid" src="{{asset('img/secadora.png')}}" alt="">
-                            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                                <i class="fa fa-2x fa-plus text-white"></i>
-                            </a>
-                        </div>
-                        <div class="bg-secondary text-center p-4">
-                            <h3 class="m-0">Reparación de Secadoras</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-3">
-                    <div class="product-item mb-2">
-                        <div class="product-img">
                             <img class="img-fluid" src="{{asset('img/refri.png')}}" alt="">
                             <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                 <i class="fa fa-2x fa-plus text-white"></i>
@@ -115,6 +102,19 @@
                         </div>
                         <div class="bg-secondary text-center p-4">
                             <h3 class="m-0">Reparación de Estufas</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="product-item mb-2">
+                        <div class="product-img">
+                            <img class="img-fluid" src="{{asset('img/secadora.png')}}" alt="">
+                            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                <i class="fa fa-2x fa-plus text-white"></i>
+                            </a>
+                        </div>
+                        <div class="bg-secondary text-center p-4">
+                            <h3 class="m-0">Reparación de Secadoras</h3>
                         </div>
                     </div>
                 </div>
@@ -186,8 +186,8 @@
                         <div class="text-center">
                             <img class="img-fluid mx-auto mb-3" src="{{asset('img/testimonial-2.jpg')}}" style="width: 100px;">
                             <p style="font-size: 22px;">Un servicio muy impecable, el técnico super profesional, 100% recomendados!!!!!</p>
-                            <h4>Alma Gárcia Ruíz</h4>
-                            <span>Estudiante</span>
+                            <h4>Gerardo Tavares Alvarado</h4>
+                            <span>DT del Cruz Azul</span>
                         </div>
                     </div>
                 </div>

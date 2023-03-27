@@ -8,19 +8,19 @@
   <ul class="nav-list">
   
     <li>
-      <a href="{{asset('ticketsNoAsignados')}}">
-        <i class='bx bx-grid-alt'></i>
-        <span class="links_name">Tickets y solicitudes</span>
-      </a>
-      <span class="tooltip">Tickets y solicitudes</span>
-    </li>
-
-    <li>
       <a href="{{asset('btoones')}}">
-        <i class='bx bx-food-menu' ></i>
+        <i class='bx bx-grid-alt'></i>
         <span class="links_name">Menu Principal</span>
       </a>
       <span class="tooltip">Menu Principal</span>
+    </li>
+
+    <li>
+      <a href="{{asset('ticketsNoAsignados')}}">
+        <i class='bx bx-food-menu' ></i>
+        <span class="links_name">Tickets y solicitudes</span>
+      </a>
+      <span class="tooltip">Tickets y solicitudes</span>
     </li>
 
     {{-- SECCION DE LOS CRUD'S--}}
