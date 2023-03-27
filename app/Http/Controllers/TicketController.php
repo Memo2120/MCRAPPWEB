@@ -37,7 +37,7 @@ class TicketController extends Controller
         $ticket->descripcion = $request->input('descripcion');
         $ticket->direccion = $request->input('direccion');
         $ticket->zona = $request->input('zona');
-        $ticket->estado = 'Activo';
+        $ticket->estado = 'Sin Asignar';
 
         if($request->input('correo')){
             $ticket->correo = $request->input('correo');
@@ -78,7 +78,7 @@ class TicketController extends Controller
     public function show($id)
     {   
         $ticket = ticket::find($id);
-        $tecnicos = tecnico::where('zona', $ticket->zona)->where('estado', 'Activo')->get();
+        $tecnicos = tecnico::where('zona', $ticket->zona)->whereNotIn('estado', ['Inactivo'])->get();
         // dd(json_decode($tecnicos));
         $tecnicos = json_decode($tecnicos);
         usort($tecnicos,function ($a, $b) {
@@ -146,7 +146,7 @@ class TicketController extends Controller
 
     public function asigTecnico($ticket_id, $tecnico_id){
         $ticket = ticket::find($ticket_id);
-        $ticket->estado = 'Pendiente';
+        $ticket->estado = 'Activo';
         $ticket->tecnicoAsignado = $tecnico_id;
         $ticket->save();
 

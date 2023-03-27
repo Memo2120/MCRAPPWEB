@@ -46,6 +46,7 @@
                         <select style="width: 75%; height:75%" name="estado" id="estado" disabled>
                             <option value="Activo">Activo</option>
                             <option value="Inactivo">Inactivo</option>
+                            <option value="Sin Asignar">Sin Asignar</option>
                             <option value="Pendiente">Pendiente</option>
                         </select>
                     </div>
