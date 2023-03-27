@@ -8,19 +8,19 @@
   <ul class="nav-list">
   
     <li>
-      <a href="{{asset('ticketsNoAsignados')}}">
-        <i class='bx bx-grid-alt'></i>
-        <span class="links_name">Tickets y solicitudes</span>
-      </a>
-      <span class="tooltip">Tickets y solicitudes</span>
-    </li>
-
-    <li>
       <a href="{{asset('btoones')}}">
-        <i class='bx bx-food-menu' ></i>
+        <i class='bx bx-grid-alt'></i>
         <span class="links_name">Menu Principal</span>
       </a>
       <span class="tooltip">Menu Principal</span>
+    </li>
+
+    <li>
+      <a href="{{asset('ticketsNoAsignados')}}">
+        <i class='bx bx-food-menu' ></i>
+        <span class="links_name">Tickets y solicitudes</span>
+      </a>
+      <span class="tooltip">Tickets y solicitudes</span>
     </li>
 
     {{-- SECCION DE LOS CRUD'S--}}
@@ -69,7 +69,7 @@
     
     <li class="profile">
       <div class="profile-details">
-        <img src="{{asset('img/yo.jpg')}}" alt="profileImg">
+        <img src="{{asset('img/alan.jpg')}}" alt="profileImg">
         <div class="name_job">
           <div class="name"> @auth  {{Auth::user()->name}} @endauth </div>
           <div class="job"><a style="color: white" href="{{asset('/logout')}}">Cerrar Sesión</a></div>

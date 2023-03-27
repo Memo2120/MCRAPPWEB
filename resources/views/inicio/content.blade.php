@@ -8,7 +8,7 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Multiservicios CRA</h4>
-                            <h3 class="display-2 font-secondary text-white mb-4">Los mejores en reparación</h3>
+                            <h3 class="display-2 font-secondary text-white mb-4">Los mejores en reparación de línea blanca</h3>
                             <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll" href="#contact">Iniciar</a>
                         </div>
                     </div>
@@ -18,7 +18,7 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Multiservicios CRA</h4>
-                            <h3 class="display-2 font-secondary text-white mb-4">Reparación de linea blanca</h3>
+                            <h3 class="display-2 font-secondary text-white mb-4">Refacciones originales</h3>
                             <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll" href="#contact">Iniciar</a>
                         </div>
                     </div>
@@ -48,9 +48,9 @@
                 </div>
                 <div class="col-lg-7">
                     <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Nosotros</h6>
-                    <h1 class="display-4 mb-3"><span class="text-primary">6+ Años de experencia </span> Reparando tus productos</h1>
-                    <p>INFORMACION</p>
-                    <a class="btn btn-primary font-weight-bold py-3 px-5 mt-2" type="button" data-toggle="modal" data-target="#exampleModalLong">Read More</a>
+                    <h1 class="display-4 mb-3"><span class="text-primary">Empresa dedicada a la reparación de equipos de linea blanca.</span> Siempre con profesionalidad y compromiso</h1>
+                    <p>INFORMACIÓN</p>
+                    <a class="btn btn-primary font-weight-bold py-3 px-5 mt-2" type="button" data-toggle="modal" data-target="#exampleModalLong">Leer más</a>
                 </div>
             </div>
         </div>
@@ -69,39 +69,52 @@
                 <div class="col-lg-4 mb-3">
                     <div class="product-item mb-2">
                         <div class="product-img">
-                            <img class="img-fluid" src="{{asset('img/lav.png')}}" alt="">
-                            <a href="{{route('solicitudes')}}" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                            <img class="img-fluid" src="{{asset('img/lavadora.png')}}" alt="">
+                            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                 <i class="fa fa-2x fa-plus text-white"></i>
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
-                            <a href="{{route('solicitudes')}}"><h3 class="m-0">Lavadoras</h3></a>
+                            <h3 class="m-0">Reparación de Lavadoras</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3">
                     <div class="product-item mb-2">
                         <div class="product-img">
-                            <img class="img-fluid" src="{{asset('img/est.png')}}" alt="">
+                            <img class="img-fluid" src="{{asset('img/refri.png')}}" alt="">
                             <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                 <i class="fa fa-2x fa-plus text-white"></i>
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
-                            <a href="{{route('solicitudes')}}"><h3 class="m-0">Estufas</h3></a>
+                            <h3 class="m-0">Reparación de Refrigeradores</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3">
                     <div class="product-item mb-2">
                         <div class="product-img">
-                            <img class="img-fluid" src="{{asset('img/ref.png')}}" alt="">
+                            <img class="img-fluid" src="{{asset('img/estufa.png')}}" alt="">
                             <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                                 <i class="fa fa-2x fa-plus text-white"></i>
                             </a>
                         </div>
                         <div class="bg-secondary text-center p-4">
-                            <a href="{{route('solicitudes')}}"><h3 class="m-0">Refrigeradores</h3></a>
+                            <h3 class="m-0">Reparación de Estufas</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="product-item mb-2">
+                        <div class="product-img">
+                            <img class="img-fluid" src="{{asset('img/secadora.png')}}" alt="">
+                            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                <i class="fa fa-2x fa-plus text-white"></i>
+                            </a>
+                        </div>
+                        <div class="bg-secondary text-center p-4">
+                            <h3 class="m-0">Reparación de Secadoras</h3>
                         </div>
                     </div>
                 </div>
@@ -123,7 +136,7 @@
             <div class="row">
                 <div class="col-md-6 border-right border-primary">
                     <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                        <h3 class="mb-4">Multiservicios CRA</h3>
+                        <h3 class="mb-4">Nosotros</h3>
                         <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Mas de 6 años de experiencia</h5>
                         <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Expertos en linea blanca</h5>
                         <h5 class="mb-3"><i class="fa fa-check text-success float-md-right mr-2 mr-md-0 ml-md-2"></i>Contacto en menos de 24hrs</h5>
@@ -132,15 +145,15 @@
                 </div>
                 <div class="col-md-6">
                     <div class="text-center text-md-left ml-md-3">
-                        <h3 class="mb-4">¿Por qué elegirnos?</h3>
+                        <h3 class="mb-4">Ofrecemos</h3>
                         <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>La cotizacion es gratuita</h5>
                         <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>Usted puede hacer una solicitud de servicio</h5>
                         <h5 class="mb-3"><i class="fa fa-check text-success mr-2"></i>Contacto directo con el tecnico</h5>
-                        <h5 class="mb-0"><i class="fa fa-check text-success mr-2"></i>Refacciones de fuentes confiables</h5>
+                        <h5 class="mb-0"><i class="fa fa-check text-success mr-2"></i>Refacciones originales de la marca de tu quipo</h5>
                     </div>
                 </div>
                 <div class="col-md-12 text-center pt-3">
-                    <a class="btn btn-primary font-weight-bold py-3 px-5 mt-4 btn-scroll" href="#contact">Get A Quote</a>
+                    <a class="btn btn-primary font-weight-bold py-3 px-5 mt-4 btn-scroll" href="#contact">Leer más</a>
                 </div>
             </div>
         </div>
@@ -160,7 +173,7 @@
                     <div class="owl-carousel testimonial-carousel">
                         <div class="text-center">
                             <img class="img-fluid mx-auto mb-3" src="{{asset('img/testimonial-1.jpg')}}" style="width: 100px;">
-                            <p style="font-size: 22px;">¡WOW! Nunca habia visto que un tecnico hiciera un diagnostico tan rapido, y que puedira arreglar mi probelma de una manera tan sencilla. 10/10</p>
+                            <p style="font-size: 22px;">¡WOW! Nunca habia visto que un técnico hiciera un diagnostico tan rapido, y que puedira arreglar mi probelma de una manera tan sencilla. 10/10</p>
                             <h4>Josh Peck</h4>
                             <span>Critico de restaurantes</span>
                         </div>
@@ -169,6 +182,12 @@
                             <p style="font-size: 22px;">Sin duda uno de los mejores servicios de reparacion a linea blanca, un conocido me recomendo a esta empresa pero yo estaba esceptico. Sin embargo mis expectativas fueron superadas en cuanto el tecnico volvio con la pieza indicada y a tiempo.</p>
                             <h4>Juan Aguita</h4>
                             <span>E-sports manager</span>
+                        </div>
+                        <div class="text-center">
+                            <img class="img-fluid mx-auto mb-3" src="{{asset('img/testimonial-2.jpg')}}" style="width: 100px;">
+                            <p style="font-size: 22px;">Un servicio muy impecable, el técnico super profesional, 100% recomendados!!!!!</p>
+                            <h4>Gerardo Tavares Alvarado</h4>
+                            <span>DT del Cruz Azul</span>
                         </div>
                     </div>
                 </div>

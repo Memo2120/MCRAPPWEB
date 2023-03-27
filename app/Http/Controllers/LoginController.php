@@ -105,7 +105,7 @@ class LoginController extends Controller
         
                  $user ->name = $request->input('name');
                  $user ->password = \Hash::make($request->input('password')) ;
-                 $user ->tipo = 'Empleado';
+                 $user ->tipo = 'Master';
                  $user ->estado ='Activo';
 
         
